@@ -4,11 +4,15 @@ import PlaylistItem from "./Common/PlaylistItem";
 
 
 const PlaylistWrapper = styled.div`
-  width: 100%;
+  width: 25%;
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
   box-sizing: border-box;
+
+  @media (max-width: 992px){
+    width: 0;
+  }
 `
 
 const Header = styled.div`

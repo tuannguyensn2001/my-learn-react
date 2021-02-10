@@ -2,11 +2,13 @@ import React from 'react';
 import Header from "../../components/Header";
 import styled from 'styled-components';
 import Playlist from "../../components/Playlist";
+import ContentLesson from "../../components/ContentLesson";
 
 const ContentWrapper = styled.div`
   padding-top: 50px;
   width: 100%;
   overflow-x: hidden;
+  display: flex;
 `
 
 
@@ -16,16 +18,10 @@ function LessonPage() {
             <Header/>
 
             <ContentWrapper>
-              <div>
-                  <div className="row">
-                      <div className="col-lg-9">
-                          main
-                      </div>
-                      <div className="col-lg-3">
-                          <Playlist/>
-                      </div>
-                  </div>
-              </div>
+                <ContentLesson/>
+                <Playlist/>
+
+
             </ContentWrapper>
 
         </div>
