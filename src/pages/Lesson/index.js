@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "../../components/Header";
 import styled from 'styled-components';
 import Playlist from "../../components/Playlist";
-import ContentLesson from "../../components/ContentLesson";
+import ContentLesson from "../../components/ContentLesson/ContentLesson";
 
 const ContentWrapper = styled.div`
   padding-top: 50px;
@@ -12,6 +12,8 @@ const ContentWrapper = styled.div`
 `
 
 
+
+
 function LessonPage() {
     return (
         <div>
@@ -19,9 +21,7 @@ function LessonPage() {
 
             <ContentWrapper>
                 <ContentLesson/>
-                <Playlist/>
-
-
+                <Playlist width={25}/>
             </ContentWrapper>
 
         </div>

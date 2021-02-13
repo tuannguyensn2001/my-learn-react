@@ -4,18 +4,13 @@ import Plyr from 'plyr-react';
 import "plyr-react/dist/plyr.css";
 
 
-
-const VideoWrapper = styled.div`
-    position: relative;
-`
-
-
 const VideoContent = styled.div`
   width: 100%;
   height: 500px;
   background-color: black;
   display: flex;
   justify-content: center;
+
 
   @media (max-width: 575.98px) {
     height: 400px;
@@ -50,7 +45,7 @@ const Video = styled.div`
   @media (max-width: 575.98px) {
     width: 100%;
   }
-  
+
   @media (min-width: 576px) and (max-width: 767.98px) {
     width: 100%;
   }
@@ -64,8 +59,8 @@ const Video = styled.div`
   @media (min-width: 992px) and (max-width: 1199.98px) {
     width: 90%;
   }
-  
-  
+
+
 `
 
 const PreviewLesson = styled.div`
@@ -74,53 +69,70 @@ const PreviewLesson = styled.div`
   padding: 10px;
   color: #fff;
   font-size: 16px;
-  
+
 `
 
 const PrevLesson = styled.div`
+  opacity: 0;
   justify-content: center;
   align-items: center;
   height: 50px;
   display: flex;
-  background-color: rgba(41,48,59,.7);
+  background-color: rgba(41, 48, 59, .7);
   position: absolute;
   z-index: 10;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  
-  &:hover{
+
+  &:hover {
     cursor: pointer;
+
   }
-  
-  &:hover ${PreviewLesson}{
+
+  &:hover ${PreviewLesson} {
     display: block;
   }
 `
 
 const NextLesson = styled.div`
+  opacity: 0;
   justify-content: center;
   align-items: center;
   height: 50px;
   display: flex;
-  background-color: rgba(41,48,59,.7);
+  background-color: rgba(41, 48, 59, .7);
   position: absolute;
   right: 0;
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
-  
-  &:hover{
+
+  &:hover {
     cursor: pointer;
+
   }
 
-  &:hover ${PreviewLesson}{
+  &:hover ${PreviewLesson} {
     display: block;
   }
 `
 
 const Icon = styled.i`
   color: #fff;
+`
+const VideoWrapper = styled.div`
+  position: relative;
+
+  &:hover ${PrevLesson} {
+    opacity: 1;
+  }
+
+  &:hover ${NextLesson} {
+    opacity: 1;
+  }
+
+
 `
 
 

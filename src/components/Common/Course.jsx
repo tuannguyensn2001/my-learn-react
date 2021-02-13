@@ -11,12 +11,13 @@ const CourseItem = styled.div`
 `
 
 const ThumbnailWrapper = styled.div`
+  height: 50%;
   position: relative;
 `
 
 const Thumbnail = styled.img`
   width: 100%;
-  height: 50%;
+  height: 100%;
 `
 
 const Category = styled(Link)`

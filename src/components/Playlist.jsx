@@ -4,14 +4,14 @@ import PlaylistItem from "./Common/PlaylistItem";
 
 
 const PlaylistWrapper = styled.div`
-  width: 25%;
+  width: ${props => props.width + '%'};
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
   box-sizing: border-box;
 
   @media (max-width: 992px){
-    width: 0;
+    width: ${props => props.width !== 100 ? 0 : '100%' };
   }
 `
 
@@ -40,18 +40,18 @@ const Icon = styled.i`
 const ListLesson = styled.div`
 `
 
-function Playlist() {
+function Playlist(props) {
 
     const [isOpened,setIsOpened] = useState(false);
 
-    const renderPlaylistItem = [1,2,3,4,5,6,7,8,9].map(item => {
+    const renderPlaylistItem = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map(item => {
         return(
             <PlaylistItem key={item} />
         )
     })
 
     return (
-        <PlaylistWrapper>
+        <PlaylistWrapper width={props.width}>
            <div>
                <Header>
                    <div>
@@ -61,7 +61,7 @@ function Playlist() {
                        <div>Hoàn thành 1/110 bài học</div>
                    </div>
                    <div>
-                       <Icon className="fas fa-step-backward"></Icon>
+                       <Icon className="fas fa-step-backward"/>
                    </div>
                </Header>
 

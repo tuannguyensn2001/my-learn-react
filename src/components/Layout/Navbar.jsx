@@ -1,6 +1,7 @@
 import {React,useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import {useSelector} from "react-redux";
 
 const Nav = styled.nav`
     width: 100%;
@@ -55,15 +56,17 @@ function Navbar()
         ],
         auth: [
                 {
-                    path: '/login',
+                    path: '/auth/login',
                     title: 'Đăng nhập'
                 },
                 {
-                    path: '/register',
+                    path: '/auth/register',
                     title: 'Đăng ký'
                 }
             ]
     });
+
+    const authUser = useSelector(state => state.auth);
 
 
 
@@ -76,13 +79,24 @@ function Navbar()
         )
     })
 
-    const listItemMenuAuth = menu.auth.map(item => {
-        return (
-            <li key={item.path} className="nav-item">
-                <NavItemLink className="nav-link active" aria-current="page" to={item.path} >{item.title}</NavItemLink>
-            </li>
+    const listItemMenuAuth = () => {
+        const {isLoggedIn, user} = authUser;
+
+        if (!isLoggedIn) {
+            return menu.auth.map(item => {
+                return (
+                    <li key={item.path} className="nav-item">
+                        <NavItemLink className="nav-link active" aria-current="page"
+                                     to={item.path}>{item.title}</NavItemLink>
+                    </li>
+                )
+            })
+        }
+
+        return(
+            <li className="nav-item"><NavItemLink>Đăng nhập rồi nha</NavItemLink></li>
         )
-    })
+    }
 
 
     return(
@@ -99,7 +113,7 @@ function Navbar()
                         {listItemMenuCategory}
                     </Menu>
                     <Menu className="navbar-nav  ">
-                        {listItemMenuAuth}
+                        {listItemMenuAuth()}
                     </Menu>
 
                 </div>
