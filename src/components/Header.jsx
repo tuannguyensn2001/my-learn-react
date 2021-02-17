@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
+import Proptypes from 'prop-types';
+import {useParams} from 'react-router-dom';
 
 
 const HeaderWrapper = styled.div`
@@ -54,15 +56,21 @@ const Title = styled.div`
   padding-left: 30px;
 `
 
-function Header() {
+Header.propTypes = {
+    name: Proptypes.string,
+}
+
+function Header({name}) {
+    const {course} = useParams();
+
     return (
         <>
             <HeaderWrapper>
                 <Menu>
-                    <Back to='/'><i className="fas fa-chevron-left "></i></Back>
+                    <Back to={`/course/${course}`}><i className="fas fa-chevron-left "></i></Back>
                     <Logo to='/'><LogoImg width="100%" height="100%"
                                           src="https://fullstack.edu.vn/assets/images/f8_text_logo.png" alt=""/></Logo>
-                    <Title>Lập trình Javascript cơ bản  </Title>
+                    <Title>{name}  </Title>
                 </Menu>
                 <div></div>
 

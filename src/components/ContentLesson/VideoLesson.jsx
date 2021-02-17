@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Plyr from 'plyr-react';
 import "plyr-react/dist/plyr.css";
+import Proptypes from 'prop-types';
 
 
 const VideoContent = styled.div`
@@ -135,8 +136,13 @@ const VideoWrapper = styled.div`
 
 `
 
+VideoLesson.propTypes = {
+    url: Proptypes.string,
+}
 
-function VideoLesson() {
+
+
+function VideoLesson({url}) {
 
     return (
         <VideoWrapper>
@@ -153,7 +159,7 @@ function VideoLesson() {
                             type: "video",
                             sources: [
                                 {
-                                    src: "1G4isv_Fylg",
+                                    src: url || 'PO4Eegb8ZOU',
                                     provider: "youtube"
                                 }
                             ]

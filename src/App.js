@@ -11,11 +11,15 @@ import {useDispatch} from "react-redux";
 import {setLoggedIn} from "./slice/authSlice";
 import Loading from "react-fullscreen-loading";
 import styled from 'styled-components';
+import {createBrowserHistory} from "history";
+
 
 const LoadingWrapper = styled.div`
   z-index: 1000;
   position: fixed;
 `
+
+const history = createBrowserHistory();
 
 
 function App() {
@@ -44,7 +48,7 @@ function App() {
     return (
         <div>
 
-            <Router>
+            <Router history={history}>
                 <LoadingWrapper>
                     <Loading loading={isLoading} background="#2ecc71" loaderColor="#3498db"/>;
                 </LoadingWrapper>

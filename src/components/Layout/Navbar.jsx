@@ -1,48 +1,48 @@
-import {React,useState} from 'react';
+import {React, useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {useSelector} from "react-redux";
+import {Avatar} from "antd";
 
 const Nav = styled.nav`
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    height: 60px;
-    z-index: 99;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  height: 60px;
+  z-index: 99;
 `
 
 const Menu = styled.ul`
-    
+
 `
 
 
 const IconToggle = styled.i`
-    margin-top: 5px;
-    color: white;
+  margin-top: 5px;
+  color: white;
 `
 
 const NavItemLink = styled(Link)`
   color: #fff;
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     color: #fff;
   }
 `
 
 const Logo = styled(Link)`
-    width: 10%;
-    height: 100%;
+  width: 10%;
+  height: 100%;
 `
 
 const LogoImg = styled.img`
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 `
 
 
-
-function Navbar()
-{
+function Navbar() {
     const [menu] = useState({
         category: [
             {
@@ -55,26 +55,24 @@ function Navbar()
             }
         ],
         auth: [
-                {
-                    path: '/auth/login',
-                    title: 'Đăng nhập'
-                },
-                {
-                    path: '/auth/register',
-                    title: 'Đăng ký'
-                }
-            ]
+            {
+                path: '/auth/login',
+                title: 'Đăng nhập'
+            },
+            {
+                path: '/auth/register',
+                title: 'Đăng ký'
+            }
+        ]
     });
 
     const authUser = useSelector(state => state.auth);
 
 
-
-
     const listItemMenuCategory = menu.category.map(item => {
         return (
             <li key={item.path} className="nav-item">
-                <NavItemLink className="nav-link active" aria-current="page" to={item.path} >{item.title}</NavItemLink>
+                <NavItemLink className="nav-link active" aria-current="page" to={item.path}>{item.title}</NavItemLink>
             </li>
         )
     })
@@ -93,16 +91,19 @@ function Navbar()
             })
         }
 
-        return(
-            <li className="nav-item"><NavItemLink>Đăng nhập rồi nha</NavItemLink></li>
+        return (
+            <Link>
+                <Avatar src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/149042797_2797977147136560_97490099559862791_o.jpg?_nc_cat=101&ccb=3&_nc_sid=09cbfe&_nc_ohc=RE5tiSiwSR8AX_Fg-iW&_nc_ht=scontent.fhan5-5.fna&oh=1223bf596383efb9c1d861714791b521&oe=6051CCD7"/>
+            </Link>
         )
     }
 
 
-    return(
+    return (
         <Nav className="navbar navbar-expand-lg  ">
             <div className="container-fluid">
-                <Logo className="navbar-brand" to='/'><LogoImg  src="https://fullstack.edu.vn/assets/images/f8_text_logo.png" alt=""/></Logo>
+                <Logo className="navbar-brand" to='/'><LogoImg
+                    src="https://fullstack.edu.vn/assets/images/f8_text_logo.png" alt=""/></Logo>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

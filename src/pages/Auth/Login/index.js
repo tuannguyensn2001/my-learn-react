@@ -1,56 +1,57 @@
 import React from 'react';
 import LayoutAuth from "../layout";
-import { Form, Input, Button, Checkbox } from 'antd';
+import {Form, Input, Button, Checkbox} from 'antd';
 import {login} from "../../../services/authService";
 import {useDispatch} from "react-redux";
 import {setLoggedIn} from "../../../slice/authSlice";
+import {useHistory} from 'react-router-dom';
 
 
-function LoginPage()
-{
+function LoginPage() {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const submitForm = (data) => {
-       const {email, password} = data;
+        const {email, password} = data;
 
-       login({email,password})
-           .then(response => {
-               console.log(response);
-               dispatch(setLoggedIn(response.data))
-           })
-           .catch(err => console.log(err));
+        login({email, password})
+            .then(response => {
+                dispatch(setLoggedIn(response.data));
+                history.push('/');
+            })
+            .catch(err => console.log(err));
 
 
     }
 
 
-    return(
+    return (
         <div>
             <h3>Đăng nhập MyLearn</h3>
             <Form
                 layout="vertical"
                 name="basic"
-                initialValues={{ remember: true }}
+                initialValues={{remember: true}}
                 onFinish={submitForm}
 
             >
                 <Form.Item
                     label="Email"
                     name="email"
-                    rules={[{ required: true,email: true, message: 'Vui lòng nhập email' }]}
+                    rules={[{required: true, email: true, message: 'Vui lòng nhập email'}]}
                 >
-                    <Input />
+                    <Input/>
                 </Form.Item>
 
                 <Form.Item
                     label="Mật khẩu"
                     name="password"
-                    rules={[{ required: true, message: 'Vui lòng nhập mật khẩu' }]}
+                    rules={[{required: true, message: 'Vui lòng nhập mật khẩu'}]}
                 >
-                    <Input.Password />
+                    <Input.Password/>
                 </Form.Item>
 
-                <Form.Item  name="remember" valuePropName="checked">
+                <Form.Item name="remember" valuePropName="checked">
                     <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 

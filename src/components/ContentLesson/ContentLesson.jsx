@@ -1,7 +1,8 @@
-import React,{useEffect,useCallback} from 'react';
+import React,{useCallback} from 'react';
 import styled from 'styled-components';
 import VideoLesson from "./VideoLesson";
 import ContentLessonTab from "./ContentLessonTab";
+import Proptypes from 'prop-types';
 
 const ContentWrapper = styled.div`
   width: 75%;
@@ -13,14 +14,15 @@ const ContentWrapper = styled.div`
 
 `
 
-function ContentLesson(props) {
+ContentLesson.propTypes = {
+    url: Proptypes.string,
+}
 
-    const renderVideoLesson = useCallback(() => <VideoLesson/>,[]);
+function ContentLesson({url}) {
+
+    const renderVideoLesson = () => <VideoLesson url={url} />;
 
 
-    useEffect(() => {
-        console.log('update');
-    })
 
     return (
         <ContentWrapper>

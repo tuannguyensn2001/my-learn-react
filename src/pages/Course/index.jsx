@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Layout from "../../components/Layout";
 import OptionFilter from "../../components/OptionFilter";
 import Course from "../../components/Common/Course";
 import styled from 'styled-components'
 import {Input} from 'antd';
+import {getCourses} from "../../services/courseServices";
 
 const Option = styled.div`
     margin-top: 30px;
@@ -14,15 +15,21 @@ const Option = styled.div`
 const {Search} = Input;
 
 function CoursePage()
-{
+{ const [courses,setCourses] = useState([]);
+
+    useEffect(() => {
+        getCourses()
+            .then(response => setCourses(response.data.data))
+            .catch(err => console.log(err));
+    },[])
 
     const change  = event => console.log(event.target);
 
 
-    const renderCourse = [1,2,3,4,5,6].map(item => {
+    const renderCourse = courses.map(course => {
         return (
-            <div key={item} className="col-md-6 col-lg-5">
-                <Course/>
+            <div key={course.id} className="col-md-6 col-lg-5">
+                <Course course={course}/>
             </div>
         )
     })

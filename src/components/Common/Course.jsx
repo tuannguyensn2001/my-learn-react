@@ -1,6 +1,7 @@
 import {React} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CourseItem = styled.div`
   margin-top: 30px;
@@ -77,18 +78,34 @@ const Price = styled.div`
 `
 
 
-function Course() {
+Course.propTypes = {
+    course: PropTypes.shape({
+        thumbnail: PropTypes.string,
+        slug: PropTypes.string,
+        name: PropTypes.string,
+        price: PropTypes.number,
+        tag: PropTypes.shape({
+            category: PropTypes.shape({
+                name: PropTypes.string,
+            })
+        })
+    })
+}
+
+
+function Course({course}) {
+
     return (
         <CourseItem>
             <ThumbnailWrapper>
                 <Link>
-                    <Thumbnail src="https://webextrasite.com/teamplate/image/18d6b1a31f.jpg"/>
+                    <Thumbnail src={course.thumbnail}/>
                 </Link>
-                <Category>Công nghệ thông tin</Category>
+                <Category>{course?.tag?.category?.name}</Category>
             </ThumbnailWrapper>
             <ContentWrapper>
                 <div>
-                    <Title>Design for web with adobe Photoshop</Title>
+                    <Title to={`/course/${course.slug}`}>{course.name}</Title>
                 </div>
                 <Instructor>
                     TUẤN NHOKVIP
@@ -96,7 +113,7 @@ function Course() {
 
                 <Info>
                     <User>2300</User>
-                    <Price>1000000</Price>
+                    <Price>{course.price}</Price>
 
                 </Info>
 

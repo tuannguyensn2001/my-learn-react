@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import PlaylistItem from "./Common/PlaylistItem";
+import PropTypes from 'prop-types';
 
 
 const PlaylistWrapper = styled.div`
@@ -10,8 +11,8 @@ const PlaylistWrapper = styled.div`
   height: 100%;
   box-sizing: border-box;
 
-  @media (max-width: 992px){
-    width: ${props => props.width !== 100 ? 0 : '100%' };
+  @media (max-width: 992px) {
+    width: ${props => props.width !== 100 ? 0 : '100%'};
   }
 `
 
@@ -30,9 +31,9 @@ const Title = styled.div`
 
 const Icon = styled.i`
   font-size: 15px;
-  
-  
-  &:hover{
+
+
+  &:hover {
     cursor: pointer;
   }
 `
@@ -40,35 +41,45 @@ const Icon = styled.i`
 const ListLesson = styled.div`
 `
 
-function Playlist(props) {
+Playlist.propTypes = {
+    course: PropTypes.shape({
+        name: PropTypes.string,
+        chapters: PropTypes.arrayOf(PropTypes.shape({
 
-    const [isOpened,setIsOpened] = useState(false);
+        }))
+    }),
+    width: PropTypes.number,
+}
 
-    const renderPlaylistItem = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map(item => {
-        return(
-            <PlaylistItem key={item} />
+function Playlist({course, width}) {
+
+    const [isOpened, setIsOpened] = useState(false);
+
+    const renderPlaylistItem = course?.chapters?.map((chapter,index) => {
+        return (
+            <PlaylistItem number={index+1} chapter={chapter} key={chapter.id}  />
         )
     })
 
     return (
-        <PlaylistWrapper width={props.width}>
-           <div>
-               <Header>
-                   <div>
-                       <Title>
-                           Lập trình javascript
-                       </Title>
-                       <div>Hoàn thành 1/110 bài học</div>
-                   </div>
-                   <div>
-                       <Icon className="fas fa-step-backward"/>
-                   </div>
-               </Header>
+        <PlaylistWrapper width={width}>
+            <div>
+                <Header>
+                    <div>
+                        <Title>
+                            {course.name}
+                        </Title>
+                        <div>Hoàn thành 1/110 bài học</div>
+                    </div>
+                    <div>
+                        <Icon className="fas fa-step-backward"/>
+                    </div>
+                </Header>
 
-               <ListLesson>
-                   {renderPlaylistItem}
-               </ListLesson>
-           </div>
+                <ListLesson>
+                    {renderPlaylistItem}
+                </ListLesson>
+            </div>
 
         </PlaylistWrapper>
     )

@@ -1,6 +1,7 @@
-import {React} from 'react';
+import {React,useEffect,useState} from 'react';
 import styled from "styled-components";
 import Course from "./Common/Course";
+import {getCourses} from "../services/courseServices";
 
 const CourseWrapper = styled.div`
   display: flex;
@@ -22,11 +23,22 @@ const Slogan = styled.div`
 
 function CourseBanner()
 {
+    const [courses,setCourses] = useState([]);
 
-    const renderCourse = [1,2,3,4,5,6].map(item => {
+    useEffect(() => {
+        console.log('call api');
+       getCourses()
+           .then(response => setCourses(response.data.data))
+           .catch(err => console.log(err));
+    },[])
+
+
+
+
+    const renderCourse = courses.map(course => {
         return (
-            <div key={item} className="col-md-4 col-sm-12 col-lg-4">
-                <Course/>
+            <div key={course.id} className="col-md-4 col-sm-12 col-lg-4">
+                <Course course={course}/>
             </div>
         )
     })

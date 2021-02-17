@@ -2,6 +2,8 @@ import {React,useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom'
 import {Checkbox} from 'antd';
+import PropTypes from 'prop-types';
+import {useParams} from 'react-router-dom';
 
 const PlaylistItemWrapper = styled.div`
 
@@ -59,7 +61,19 @@ const LessonTime = styled.div`
     font-size: 12px;
 `
 
-function PlaylistItem() {
+PlaylistItem.propTypes = {
+    chapter: PropTypes.shape({
+        lessons: PropTypes.arrayOf(PropTypes.shape({
+            name: PropTypes.string,
+            order: PropTypes.number,
+        }))
+    }),
+    number: PropTypes.number,
+}
+
+function PlaylistItem({number,chapter}) {
+    const {course} = useParams();
+
     const [isOpened,setIsOpened] = useState(false);
 
     const openLesson =  () => {
@@ -70,13 +84,17 @@ function PlaylistItem() {
         if (!isOpened) return;
 
         return(
-            <LessonList>
-                <Checkbox></Checkbox>
-                <Lesson to=''>
-                    <div>1. Bài 1</div>
-                    <LessonTime><i className="fas fa-play-circle"></i>  12:30 </LessonTime>
-                </Lesson>
-            </LessonList>
+          chapter.lessons.map(lesson => {
+              return(
+                  <LessonList key={lesson.id} >
+                      <Checkbox/>
+                      <Lesson to={`/course/${course}/learn/${lesson.slug}`}>
+                          <div>{lesson.order}. {lesson.name}</div>
+                          <LessonTime><i className="fas fa-play-circle"></i>  12:30 </LessonTime>
+                      </Lesson>
+                  </LessonList>
+              )
+          })
         )
     }
 
@@ -101,7 +119,7 @@ function PlaylistItem() {
             <Chapter onClick={openLesson}>
                 <div>
                     <ChapterName>
-                        Phần 1: Làm quen
+                        Phần {number}: {chapter.name}
                     </ChapterName>
                     <ChapterProgress>
                         2/2 | 1:03:45
