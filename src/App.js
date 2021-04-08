@@ -13,6 +13,7 @@ import Loading from "react-fullscreen-loading";
 import styled from 'styled-components';
 import {createBrowserHistory} from "history";
 import DemoCourseDetail from './pages/CourseDetails/demo'
+import CourseDetail from "./features/CourseDetail";
 
 
 const LoadingWrapper = styled.div`
@@ -57,7 +58,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/courses' component={CoursePage}/>
-                    <Route path='/course/:course' exact component={DemoCourseDetail}/>
+                    <Route path='/course/:course' exact component={CourseDetail}/>
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
 

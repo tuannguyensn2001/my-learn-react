@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "../../components/Layout";
 import styled from 'styled-components'
-import  './style.css'
+// import  './style.css'
 
 
 function DemoCourseDetail()
@@ -26,6 +26,7 @@ function DemoCourseDetail()
           <a href="#"><div className="buttons__btn">Wishlist<i class="far fa-heart buttons__icon"></i></div></a>
           <a href="#"><div className="buttons__btn">Share<i class="fal fa-share buttons__icon"></i></div></a>
           <a href="#"><div className="buttons__btn">Gift this course</div></a>
+
           </div>
         </div>
       </div>
