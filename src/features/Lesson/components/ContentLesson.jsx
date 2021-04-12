@@ -27,7 +27,7 @@ function ContentLesson({url}) {
     return (
         <ContentWrapper>
             {renderVideoLesson()}
-           <ContentLessonTab/>
+           <ContentLessonTab />
         </ContentWrapper>
     )
 }

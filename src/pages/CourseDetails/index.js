@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import styled from 'styled-components';
 import {useParams} from 'react-router-dom';
 import {getCourseBySlug} from "../../services/courseServices";
-import Playlist from "../../components/Playlist";
+import Playlist from "../../features/Lesson/components/Playlist";
 import CourseDropdown from "../../components/CourseDetail/CourseDropdown";
 
 
@@ -90,7 +90,7 @@ function CourseDetails() {
                });
            })
            .catch(err => console.log({err}));
-    }, [])
+    }, [course])
 
     const filterContent = (contents,type) => {
         return contents.find(content => content.name === type);

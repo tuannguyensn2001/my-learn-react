@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./features/Home";
 import CoursePage from "./pages/Course";
 import "antd/dist/antd.css";
-import LessonPage from "./pages/Lesson";
+import LessonPage from "./features/Lesson";
 import CourseDetails from "./pages/CourseDetails";
 import LoginPage from "./pages/Auth/Login";
 import {refresh, me} from "./services/authService";

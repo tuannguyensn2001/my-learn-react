@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import Header from "../../components/Header";
 import styled from 'styled-components';
-import Playlist from "../../components/Playlist";
+import Playlist from "./components/Playlist";
 import {useParams} from 'react-router-dom';
-import ContentLesson from "../../components/ContentLesson/ContentLesson";
+import ContentLesson from "./components/ContentLesson";
 import {getCourseBySlug} from "../../services/courseServices";
 import {getLessonBySlug} from "../../services/lessonService";
+import {LessonProvider} from "./context/LessonContext";
+import Layout from "../../components/Layout";
 
 const ContentWrapper = styled.div`
-  padding-top: 50px;
+  
   width: 100%;
   overflow-x: hidden;
   display: flex;
@@ -62,15 +63,17 @@ function LessonPage() {
 
 
     return (
-        <div>
-            <Header name={currentLesson.name} />
+        <Layout>
 
-            <ContentWrapper>
-                <ContentLesson url={currentLesson.video_url} />
-                <Playlist course={currentCourse} width={25}/>
-            </ContentWrapper>
 
-        </div>
+            <LessonProvider value={currentCourse}>
+                <ContentWrapper>
+                    <ContentLesson  url={currentLesson.video_url} />
+                    <Playlist width={25}/>
+                </ContentWrapper>
+            </LessonProvider>
+
+        </Layout>
     )
 }
 

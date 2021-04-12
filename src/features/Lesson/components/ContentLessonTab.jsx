@@ -4,7 +4,7 @@ import Overview from "./Overview";
 import Notes from "./Notes";
 import styled from "styled-components";
 import Related from "./Related";
-import Playlist from "../Playlist";
+import Playlist from "./Playlist";
 
 
 const ContentContainer = styled.div`
@@ -44,7 +44,7 @@ function ContentLessonTab()
         {
           key: 'content',
           name: 'Nội dung',
-          component: <Playlist width={100}/>,
+          component: <Playlist  width={100}/>,
           isVisibile: false,
         },
         {
@@ -68,7 +68,6 @@ function ContentLessonTab()
     ])
 
     useEffect(() => {
-
         const handleResize = event => {
             if (event.target.innerWidth < 992){
                setTabs(prev => {
@@ -107,9 +106,6 @@ function ContentLessonTab()
                 <TabContent>
                     {renderContent}
                 </TabContent>
-
-
-
 
 
             </Content>

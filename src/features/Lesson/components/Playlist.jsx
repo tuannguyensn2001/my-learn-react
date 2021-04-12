@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState,useContext} from 'react';
 import styled from "styled-components";
-import PlaylistItem from "./Common/PlaylistItem";
+import PlaylistItem from "../../../components/Common/PlaylistItem";
 import PropTypes from 'prop-types';
+import LessonContext from "../context/LessonContext";
 
 
 const PlaylistWrapper = styled.div`
@@ -42,18 +43,20 @@ const ListLesson = styled.div`
 `
 
 Playlist.propTypes = {
-    course: PropTypes.shape({
-        name: PropTypes.string,
-        chapters: PropTypes.arrayOf(PropTypes.shape({
-
-        }))
-    }),
+    // course: PropTypes.shape({
+    //     name: PropTypes.string,
+    //     chapters: PropTypes.arrayOf(PropTypes.shape({
+    //
+    //     }))
+    // }),
     width: PropTypes.number,
 }
 
-function Playlist({course, width}) {
+function Playlist({width}) {
 
     const [isOpened, setIsOpened] = useState(false);
+
+    const course = useContext(LessonContext);
 
     const renderPlaylistItem = course?.chapters?.map((chapter,index) => {
         return (

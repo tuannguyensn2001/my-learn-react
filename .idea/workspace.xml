@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/my-learn.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Course.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Course.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/ContentLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/ContentLesson.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/ContentLessonTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/ContentLessonTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Notes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Notes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Overview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Overview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Related.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Related.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/TabLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/TabLesson.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/VideoLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/VideoLesson.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CourseBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/CourseBanner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Playlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Playlist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/API.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CourseDetails/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Lesson/index.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1r1x2EP5suTGUktF0C17H1On7hH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\ReactJS\my-learn-react\src\features\Lesson\components" />
+      <recent name="D:\Workspace\ReactJS\my-learn-react\src\features\Lesson\Components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="" />
+      <created>1618157191935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618157191935</updated>
+      <workItem from="1618157196316" duration="1342000" />
+      <workItem from="1618161981445" duration="247000" />
+      <workItem from="1618239654069" duration="69000" />
+      <workItem from="1618239740304" duration="690000" />
+      <workItem from="1618241899328" duration="3111000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

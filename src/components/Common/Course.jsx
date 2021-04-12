@@ -80,7 +80,6 @@ const Price = styled.div`
 
 Course.propTypes = {
     course: PropTypes.shape({
-        thumbnail: PropTypes.string,
         slug: PropTypes.string,
         name: PropTypes.string,
         price: PropTypes.number,
@@ -88,6 +87,9 @@ Course.propTypes = {
             category: PropTypes.shape({
                 name: PropTypes.string,
             })
+        }),
+        media: PropTypes.shape({
+            source: PropTypes.string,
         })
     })
 }
@@ -98,8 +100,8 @@ function Course({course}) {
     return (
         <CourseItem>
             <ThumbnailWrapper>
-                <Link>
-                    <Thumbnail src={course.thumbnail}/>
+                <Link to={"/"}>
+                    <Thumbnail src={course.media.source}/>
                 </Link>
                 <Category>{course?.tag?.category?.name}</Category>
             </ThumbnailWrapper>
@@ -108,15 +110,13 @@ function Course({course}) {
                     <Title to={`/course/${course.slug}`}>{course.name}</Title>
                 </div>
                 <Instructor>
-                    TUẤN NHOKVIP
+                    Giáo viên đó
                 </Instructor>
 
                 <Info>
                     <User>2300</User>
                     <Price>{course.price}</Price>
-
                 </Info>
-
 
             </ContentWrapper>
         </CourseItem>
