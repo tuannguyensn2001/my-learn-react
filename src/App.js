@@ -12,6 +12,8 @@ import {setLoggedIn} from "./slice/authSlice";
 import Loading from "react-fullscreen-loading";
 import styled from 'styled-components';
 import {createBrowserHistory} from "history";
+import DemoCourseDetail from './pages/CourseDetails/demo'
+import CourseDetail from "./features/CourseDetail";
 
 
 const LoadingWrapper = styled.div`
@@ -28,7 +30,7 @@ function App() {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        setIsLoading(true);
+       
         me()
             .then(response => {
                 dispatch(setLoggedIn({
@@ -36,11 +38,11 @@ function App() {
                     user: response.data,
                 }))
 
-                setIsLoading(false);
+                
 
             })
             .catch(err => {
-                setIsLoading(false);
+                
             });
 
     }, [])
@@ -56,7 +58,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/courses' component={CoursePage}/>
-                    <Route path='/course/:course' exact component={CourseDetails}/>
+                    <Route path='/course/:course' exact component={CourseDetail}/>
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
 
