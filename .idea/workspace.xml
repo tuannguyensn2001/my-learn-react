@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my-learn.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Course.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Course.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/ContentLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/ContentLesson.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/ContentLessonTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/ContentLessonTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Notes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Notes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Overview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Overview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/Related.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Related.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/TabLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/TabLesson.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentLesson/VideoLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/VideoLesson.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CourseBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/CourseBanner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Playlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Playlist.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/API.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CourseDetails/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Lesson/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +58,8 @@
       <workItem from="1618239654069" duration="69000" />
       <workItem from="1618239740304" duration="690000" />
       <workItem from="1618241899328" duration="3111000" />
+      <workItem from="1618245750926" duration="43000" />
+      <workItem from="1618496948478" duration="3878000" />
     </task>
     <servers />
   </component>
@@ -90,5 +76,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

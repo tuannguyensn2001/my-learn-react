@@ -1,14 +1,9 @@
-import React from 'react';
+import React from "react";
 import styled from 'styled-components';
-import Button from "./Buttton";
-
 
 const HeaderWrapper = styled.div`
   background-color: #1c1d1f;
   padding-top: 32px;
-`
-
-const Container = styled.div`
   color: #fff;
 `
 
@@ -19,10 +14,11 @@ const GuideLink = styled.div`
 `
 
 const ForwardArrow = styled.i`
-  margin: 5px 5px 0 5px;
+  padding: 0 8px;
+  font-size: 0.6rem;
 `
 
-const HeaderTitle = styled.div`
+const HeadTitle = styled.div`
   text-transform: capitalize;
   font-weight: 700;
   margin-top: 8px;
@@ -30,80 +26,72 @@ const HeaderTitle = styled.div`
   line-height: 1.2;
 `
 
-const HeaderDescription = styled.div`
+const HeadDes = styled.div`
   font-size: 1.4rem;
   line-height: 1.4;
   margin: 8px 0;
   font-weight: 300;
 `
 
-const HeaderCreatedBy = styled.div`
+const HeadCreatedBy = styled.div`
   font-size: 1rem;
   font-weight: 300;
 `
 
-const HeadButtonWrapper = styled.div`
+const ProfileLink = styled.div`
+  text-decoration: underline;
+  color: #b7a9e5;
+`
+const HeadButton = styled.div`
   display: flex;
   margin-top: 16px;
   padding-bottom: 48px;
 `
 
-const TitleWrapper = styled.div`
-  display: flex;
+const Button = styled.div`
+  display: block;
+  color: #fff;
+  padding: 5px 12px;
+  border: 1px solid #fff;
+  margin-right: 16px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
 `
 
-
-
-const titles = [
-    {
-        content: 'Frontend',
-        arrow: true,
-    },
-    {
-        content: 'Javascript',
-        arrow: false,
-    }
-]
-
-
+const ButtonIcon = styled.i`
+  margin-left: 8px;
+`
 
 function Header() {
-
-    const renderTitle = titles.map(title => {
-        return(
-            <TitleWrapper className={"d-flex"}>
-                <GuideLink href="#" className="guide-link">{title.content}</GuideLink>
-                {title.arrow && <ForwardArrow className="far fa-chevron-right forward-arrow"/>}
-            </TitleWrapper>
-        )
-    })
-
-
     return (
-        <HeaderWrapper className="head">
-            <div className="row">
-                <Container className="container col-xl-6 offset-xl-2 col-lg-7 col-md-9">
-                    <div className="head__link d-flex">
-                        {renderTitle}
-                    </div>
-                    <HeaderTitle className="head__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Exercitationem.
-                    </HeaderTitle>
-                    <HeaderDescription className="head__des">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Hic obcaecati
-                        magni repudiandae culpa voluptatum perferendis suscipit!
-                    </HeaderDescription>
-                    <HeaderCreatedBy className="head__created-by">Created by <a link href="#" className="profile-link">Jose
-                        Portilla</a></HeaderCreatedBy>
-                    <HeadButtonWrapper className="head__buttons">
-                        <Button>
-                            Wishlist<i className="far fa-heart buttons__icon"/>
-                        </Button>
-                        <Button>Share<i className="fal fa-share buttons__icon"/></Button>
+        <HeaderWrapper className="row head">
+            <div className="container col-xl-6 offset-xl-1 col-lg-7 col-md-9 col-sm-10">
+                <div className="head__link">
+                    <GuideLink href="#" className="guide-link">Lorem, ipsum dolor.</GuideLink>
+                    <ForwardArrow className="far fa-chevron-right forward-arrow"/>
+                </div>
+                <HeadTitle className="head__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem.
+                </HeadTitle>
+                <HeadDes className="head__des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic obcaecati
+                    magni
+                    repudiandae culpa voluptatum perferendis suscipit!
+                </HeadDes>
+                <HeadCreatedBy className="head__created-by">Created by <ProfileLink link href="#" className="profile-link">Jose
+                    Portilla</ProfileLink>
+                </HeadCreatedBy>
+                <HeadButton className="head__buttons">
+                    <a href="#">
+                        <Button className="buttons__btn">Wishlist<ButtonIcon className="far fa-heart buttons__icon"/></Button>
+                    </a>
+                    <a href="#">
+                        <Button className="buttons__btn">Share<ButtonIcon className="fal fa-share buttons__icon"/></Button>
+                    </a>
+                    <a href="#">
                         <Button className="buttons__btn">Gift this course</Button>
-
-                    </HeadButtonWrapper>
-                </Container>
+                    </a>
+                </HeadButton>
             </div>
         </HeaderWrapper>
     )
