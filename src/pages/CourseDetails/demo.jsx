@@ -31,17 +31,6 @@ function DemoCourseDetail()
         </div>
       </div>
     </div>
-    {/* Body */}
-    <div className="cover">
-      <div className="row">
-        <div className="container des-box col-xl-6 offset-xl-2">
-          <div className="des-box__heading">Lorem ipsum dolor sit.</div>
-          <div className="des-box__body">
-            
-          </div>
-        </div>
-      </div>
-    </div>
    </Layout>
   )
 }
