@@ -1,11 +1,20 @@
 import React from "react";
-import {useDispatch} from "react-redux";
-import {addCourse} from "../../Cart/slice/cartSlice";
+import {useDispatch,useSelector} from "react-redux";
+import {fetchAPIAddToCart} from "../../Cart/slice/cartSlice";
 
-export default () => {
 
+export default ({course}) => {
+
+    const user = useSelector(state => state.auth.user);
     const dispatch = useDispatch();
 
+
+    const handleClickAddToCart = () => {
+        dispatch(fetchAPIAddToCart({
+            userId: user.id,
+            courseId: course.id,
+        }))
+    }
 
 
     return(
@@ -26,11 +35,7 @@ export default () => {
                     <i className="clock-icon fal fa-alarm-clock"></i>
                     1 day left at this price!
                 </div>
-                <button onClick={() => dispatch(addCourse({
-                    course: {
-                        name: 'khoa hoc moi'
-                    }
-                }))} className="bc-btn__add bc-btn">Add to cart</button>
+                <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Add to cart</button>
                 <button className="bc-btn__buy bc-btn">Buy now</button>
             </div>
         </div>

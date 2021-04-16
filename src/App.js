@@ -13,6 +13,7 @@ import styled from 'styled-components';
 import {createBrowserHistory} from "history";
 import CourseDetail from "./features/CourseDetail";
 import Cart from "./features/Cart";
+import {fetchAPIGetCart} from "./features/Cart/slice/cartSlice";
 
 
 const LoadingWrapper = styled.div`
@@ -36,12 +37,14 @@ function App() {
                     token: localStorage.getItem('user_token'),
                     user: response.data,
                 }))
-
                 setIsLoading(false);
+
+                dispatch(fetchAPIGetCart());
 
 
             })
             .catch(err => {
+                console.log(err);
                 setIsLoading(false);
             });
 
