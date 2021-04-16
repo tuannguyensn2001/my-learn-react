@@ -1,6 +1,13 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {addCourse} from "../../Cart/slice/cartSlice";
 
 export default () => {
+
+    const dispatch = useDispatch();
+
+
+
     return(
         <div className="buy-course container col-xl-3 offset-xl-8">
             <div className="buy-course__video">
@@ -19,7 +26,11 @@ export default () => {
                     <i className="clock-icon fal fa-alarm-clock"></i>
                     1 day left at this price!
                 </div>
-                <button className="bc-btn__add bc-btn">Add to cart</button>
+                <button onClick={() => dispatch(addCourse({
+                    course: {
+                        name: 'khoa hoc moi'
+                    }
+                }))} className="bc-btn__add bc-btn">Add to cart</button>
                 <button className="bc-btn__buy bc-btn">Buy now</button>
             </div>
         </div>

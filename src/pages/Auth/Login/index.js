@@ -17,7 +17,7 @@ function LoginPage() {
         login({email, password})
             .then(response => {
                 dispatch(setLoggedIn(response.data));
-                history.push('/');
+                // history.push('/');
             })
             .catch(err => console.log(err));
 

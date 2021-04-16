@@ -29,7 +29,7 @@ function App() {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-       
+        setIsLoading(true);
         me()
             .then(response => {
                 dispatch(setLoggedIn({
@@ -37,11 +37,12 @@ function App() {
                     user: response.data,
                 }))
 
-                
+                setIsLoading(false);
+
 
             })
             .catch(err => {
-                
+                setIsLoading(false);
             });
 
     }, [])
@@ -60,7 +61,7 @@ function App() {
                     <Route path='/course/:course' exact component={CourseDetail}/>
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
-                    <Route path='/cart' component={Cart} />
+                    <Route path='/cart' component={Cart}/>
 
                 </Switch>
             </Router>

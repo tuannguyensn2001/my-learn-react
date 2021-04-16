@@ -93,7 +93,7 @@ function Navbar() {
 
         return (
             <Link>
-                <Avatar src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/149042797_2797977147136560_97490099559862791_o.jpg?_nc_cat=101&ccb=3&_nc_sid=09cbfe&_nc_ohc=RE5tiSiwSR8AX_Fg-iW&_nc_ht=scontent.fhan5-5.fna&oh=1223bf596383efb9c1d861714791b521&oe=6051CCD7"/>
+                <Avatar src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.6435-9/149042797_2797977147136560_97490099559862791_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=DeTHIC3FWMMAX-MTonz&_nc_ht=scontent-hkt1-1.xx&oh=1a01931737480f968a9a26f911c653ac&oe=609DB3DC"/>
             </Link>
         )
     }
