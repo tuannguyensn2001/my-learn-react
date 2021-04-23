@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Lesson/components/Overview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/Overview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Lesson/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/components/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/demo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CourseDetails/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NuxtJS/gptc-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -65,6 +70,11 @@
       <workItem from="1618496948478" duration="3878000" />
       <workItem from="1618580628217" duration="3650000" />
       <workItem from="1618592488376" duration="9000" />
+      <workItem from="1618593114390" duration="157000" />
+      <workItem from="1618750902093" duration="1133000" />
+      <workItem from="1618752176774" duration="60000" />
+      <workItem from="1618754620510" duration="4140000" />
+      <workItem from="1619195122793" duration="2430000" />
     </task>
     <servers />
   </component>

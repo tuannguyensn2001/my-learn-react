@@ -30,6 +30,7 @@ const cart = createSlice({
     },
     extraReducers: {
         [fetchAPIAddToCart.fulfilled]: (state,action) => {
+            if (!state.courseList.find(item => item.id === parseInt(action.payload.course.id)))
             state.courseList.push(action.payload.course);
         },
         [fetchAPIGetCart.fulfilled]: (state,action) => {
