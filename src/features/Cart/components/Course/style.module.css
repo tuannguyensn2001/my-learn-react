@@ -1,0 +1,56 @@
+.body__course {
+    border: 1px solid #cccccc6b;
+    border-radius: 3px;
+    padding: 4px 16px;
+    display: flex;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.course__wrap {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.course__checkbox {
+    margin: auto 16px auto 0;
+}
+
+.course__picture {
+    margin-right: 16px;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.course__price {
+    margin: auto 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #a96bf4;
+}
+
+.course__action {
+    margin: auto 0;
+}
+
+/*.btn--cart {*/
+/*    width: 100%;*/
+/*    background: #8841b5;*/
+/*    border: none;*/
+/*    border-radius: 3px;*/
+/*    height: 2.5rem;*/
+/*    color: #fff;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 500;*/
+/*    text-transform: capitalize;*/
+/*}*/
+
+/*.btn--cart:hover {*/
+/*    color: #fff;*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*.btn--cart:focus {*/
+/*    outline: none;*/
+/*}*/

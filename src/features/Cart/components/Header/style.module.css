@@ -1,0 +1,12 @@
+.header {
+    background-color: #1c1d1f;
+}
+
+.cart__header {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 6px;
+    line-height: 140px;
+}

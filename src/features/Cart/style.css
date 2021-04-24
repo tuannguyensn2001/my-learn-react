@@ -1,16 +1,16 @@
 /* Cart header */
-.header {
-    background-color: #1c1d1f;
-}
+/*.header {*/
+/*    background-color: #1c1d1f;*/
+/*}*/
 
-.cart__header {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding-bottom: 6px;
-    line-height: 140px;
-}
+/*.cart__header {*/
+/*    color: #fff;*/
+/*    font-size: 2rem;*/
+/*    font-weight: 400;*/
+/*    text-transform: capitalize;*/
+/*    padding-bottom: 6px;*/
+/*    line-height: 140px;*/
+/*}*/
 
 /* End cart header */
 
@@ -38,41 +38,41 @@
     margin-left: 16px;
 }
 
-.body__course {
-    border: 1px solid #cccccc6b;
-    border-radius: 3px;
-    padding: 4px 16px;
-    display: flex;
-    margin-left: -1px;
-    margin-top: -1px;
-}
+/*.body__course {*/
+/*    border: 1px solid #cccccc6b;*/
+/*    border-radius: 3px;*/
+/*    padding: 4px 16px;*/
+/*    display: flex;*/
+/*    margin-left: -1px;*/
+/*    margin-top: -1px;*/
+/*}*/
 
-.course__wrap {
-    display: flex;
-    font-size: 1rem;
-    font-weight: 400;
-}
+/*.course__wrap {*/
+/*    display: flex;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 400;*/
+/*}*/
 
-.course__checkbox {
-    margin: auto 16px auto 0;
-}
+/*.course__checkbox {*/
+/*    margin: auto 16px auto 0;*/
+/*}*/
 
-.course__picture {
-    margin-right: 16px;
-    width: 150px;
-    border-radius: 3px;
-}
+/*.course__picture {*/
+/*    margin-right: 16px;*/
+/*    width: 150px;*/
+/*    border-radius: 3px;*/
+/*}*/
 
-.course__price {
-    margin: auto 0;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #a96bf4;
-}
+/*.course__price {*/
+/*    margin: auto 0;*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: 400;*/
+/*    color: #a96bf4;*/
+/*}*/
 
-.course__action {
-    margin: auto 0;
-}
+/*.course__action {*/
+/*    margin: auto 0;*/
+/*}*/
 
 
 /* Buttons */
