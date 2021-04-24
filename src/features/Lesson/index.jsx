@@ -7,7 +7,7 @@ import {getCourseBySlug} from "../../services/courseServices";
 import {getLessonBySlug} from "../../services/lessonService";
 import {LessonProvider} from "./context/LessonContext";
 import Layout from "../../components/Layout";
-// import Loading from "react-fullscreen-loading/lib/loading";
+import Loading from 'react-fullscreen-loading';
 
 
 const ContentWrapper = styled.div`
@@ -25,6 +25,7 @@ function LessonPage() {
     const [isLoading,setIsLoading] = useState(false);
     useEffect(() => {
 
+        setIsLoading(true);
         Promise.allSettled([getLessonBySlug(course, lesson), getCourseBySlug(course)])
             .then(response => {
                 const [lessonResponse, courseResponse] = response;
@@ -34,9 +35,10 @@ function LessonPage() {
                 handleCourseResponse(courseResponse);
 
 
+                setIsLoading(false);
             })
             .catch(err => {
-
+                setIsLoading(false);
             })
 
     }, [course,lesson])
@@ -71,6 +73,7 @@ function LessonPage() {
 
     return (
         <Layout>
+            <Loading loading={isLoading} background="blue" loaderColor="#3498db"/>
             <LessonProvider value={currentCourse}>
                 <ContentWrapper>
                     <ContentLesson  url={currentLesson.video_url} />
