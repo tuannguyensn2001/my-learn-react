@@ -13,7 +13,8 @@ import styled from 'styled-components';
 import {createBrowserHistory} from "history";
 import CourseDetail from "./features/CourseDetail";
 import Cart from "./features/Cart";
-
+import {fetchAPIGetCart} from "./features/Cart/slice/cartSlice";
+import ScrollToTop from "./hooks/scrollToTop";
 
 const LoadingWrapper = styled.div`
   z-index: 1000;
@@ -36,12 +37,14 @@ function App() {
                     token: localStorage.getItem('user_token'),
                     user: response.data,
                 }))
-
                 setIsLoading(false);
+
+                dispatch(fetchAPIGetCart());
 
 
             })
             .catch(err => {
+                console.log(err);
                 setIsLoading(false);
             });
 
@@ -56,9 +59,13 @@ function App() {
                 </LoadingWrapper>
 
                 <Switch>
+
                     <Route exact path='/' component={Home}/>
                     <Route path='/courses' component={CoursePage}/>
-                    <Route path='/course/:course' exact component={CourseDetail}/>
+                    <Route path='/course/:course' exact >
+                        <ScrollToTop/>
+                        <CourseDetail/>
+                    </Route>
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
                     <Route path='/cart' component={Cart}/>

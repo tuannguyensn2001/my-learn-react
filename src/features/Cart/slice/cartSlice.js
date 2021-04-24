@@ -1,4 +1,20 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
+import {addToCart,getCart} from "../services";
+
+const fetchAPIAddToCart = createAsyncThunk('cart/fetchAPIAddToCart',async ({courseId,userId},thunkAPI) => {
+    const response = await addToCart({
+        courseId,
+        userId
+    })
+
+    return response.data;
+})
+
+const fetchAPIGetCart = createAsyncThunk('cart/fetchAPIGetCart',async (params,thunkAPI) => {
+    const response = await getCart();
+    return response.data;
+})
+
 
 const cart = createSlice({
     name: 'cart',
@@ -11,11 +27,24 @@ const cart = createSlice({
             const {course} = action.payload;
             state.courseList.push(course);
         }
+    },
+    extraReducers: {
+        [fetchAPIAddToCart.fulfilled]: (state,action) => {
+            if (!state.courseList.find(item => item.id === parseInt(action.payload.course.id)))
+            state.courseList.push(action.payload.course);
+        },
+        [fetchAPIGetCart.fulfilled]: (state,action) => {
+            state.courseList = action.payload.cart;
+        }
     }
 })
 
 const {reducer,actions} = cart;
 
 export const {addCourse} = actions;
+export {
+    fetchAPIAddToCart,
+    fetchAPIGetCart
+}
 
 export default reducer;

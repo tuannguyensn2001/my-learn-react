@@ -60,7 +60,7 @@ function CourseDetail() {
 
             {/* Buy course bar */}
 
-            <BuyCourse/>
+            <BuyCourse course={currentCourse} />
             {/* End buy course bar */}
 
 
