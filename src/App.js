@@ -15,6 +15,7 @@ import CourseDetail from "./features/CourseDetail";
 import Cart from "./features/Cart";
 import {fetchAPIGetCart} from "./features/Cart/slice/cartSlice";
 import ScrollToTop from "./hooks/scrollToTop";
+import Profile from "./features/Profile";
 
 const LoadingWrapper = styled.div`
   z-index: 1000;
@@ -69,6 +70,7 @@ function App() {
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
                     <Route path='/cart' component={Cart}/>
+                    <Route path='/profile' component={Profile} />
 
                 </Switch>
             </Router>
