@@ -2,7 +2,7 @@ import axios from 'axios';
 import {refresh} from "./authService";
 
 const myLearn = axios.create({
-    baseURL: 'http://mylearn.local/api',
+    baseURL: process.env.REACT_APP_API,
     headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': '*',
