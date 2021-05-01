@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/Button/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Cart/components/Course/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/Course/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Lesson/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/Course/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/Course/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Lesson/components/VideoLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/components/VideoLesson.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NuxtJS/gptc-web" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -74,6 +72,8 @@
       <workItem from="1618754620510" duration="4140000" />
       <workItem from="1619195122793" duration="2800000" />
       <workItem from="1619313124727" duration="38000" />
+      <workItem from="1619526436482" duration="1815000" />
+      <workItem from="1619530003789" duration="8000" />
     </task>
     <servers />
   </component>
