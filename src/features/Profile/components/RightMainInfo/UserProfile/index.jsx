@@ -3,6 +3,7 @@ import styles from './style.module.css';
 import TextInsert from '../TextInsert';
 import SubHeading from '../SubHeading';
 import SaveButton from '../SaveButton';
+import {Input} from "antd";
 
 const coverAllClass = styles.cover_all;
 const headingClass = styles.heading;
@@ -19,13 +20,15 @@ function UserProfile ({UserProfile}) {
             </div>
             <div className={lineBreakClass}></div>
             <div className={inputSectionClass}>
-                <SubHeading>Thong tin ca nhan</SubHeading>
-                <TextInsert>Nam dep trai</TextInsert>
-                <TextInsert>Vai lon</TextInsert>
-                <TextInsert></TextInsert>
-                <TextInsert></TextInsert>
-                <TextInsert></TextInsert>
-                <SaveButton></SaveButton>
+                {/*<SubHeading>Thong tin ca nhan</SubHeading>*/}
+                {/*<TextInsert>Nam dep trai</TextInsert>*/}
+                {/*<TextInsert>Vai lon</TextInsert>*/}
+                {/*<TextInsert></TextInsert>*/}
+                {/*<TextInsert></TextInsert>*/}
+                {/*<TextInsert></TextInsert>*/}
+                {/*<SaveButton></SaveButton>*/}
+
+                <Input/>
 
             </div>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
+import {Link,useRouteMatch} from 'react-router-dom';
+import styled from 'styled-components';
 
 const coverAllClass = styles.cover_all;
 const coverClass = styles.cover;
@@ -9,7 +11,23 @@ const nameClass = styles.name;
 const navListClass = styles.nav__list;
 const navItemClass = styles.nav__item;
 
+
+
+const NavLink = styled(Link)`
+  color: #0f03d2;
+  text-align: center;
+
+  &:hover {
+    background-color: #8a92a3;
+    color: #fff;
+    width: 100%;
+  }
+`
+
 function LeftNavBar ({LeftNavBar}) {
+
+    const {url, path} = useRouteMatch();
+
     return (
         <div className={coverAllClass}>
             <div className={coverClass}>
@@ -19,10 +37,10 @@ function LeftNavBar ({LeftNavBar}) {
                 <div className={nameClass}>Nguyễn Văn Nam</div>
             </div>
 
-            <ul className={navListClass}>
-                <li className={navItemClass}>Hồ sơ</li>
-                <li className={navItemClass}>Ảnh đại diện</li>
-                <li className={navItemClass}>Tài khoản</li>
+            <ul className={navListClass} >
+                <NavLink to={`${path}/`}>Hồ sơ</NavLink>
+                <NavLink to={`${path}/avatar`} >Ảnh đại diện</NavLink>
+                <NavLink to={`${path}/account`} >Tài khoản</NavLink>
             </ul>
         </div>
     )

@@ -15,6 +15,11 @@
     margin-left: -1px;
 }
 
+.o-course__cover:hover{
+    cursor: pointer;
+}
+
+
 .o-course__pic-cover {
     height: 150px;
     overflow: hidden;
@@ -58,9 +63,9 @@
 }
 
     /* Display popup */
-.o-course:hover .o-course__popup {
-    display: block;
-}
+/*.o-course:hover .o-course__popup {*/
+/*    display: block;*/
+/*}*/
 
             /* other course -- popup */
 
@@ -93,7 +98,7 @@
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 1px solid #ccc;
-    /* display: none; */
+     display: none;
 }
 
 .popup__cover {
@@ -101,6 +106,7 @@
     height: 92%;
     position: relative;
 }
+
 
 .popup__name {
     font-size: 1.6rem;

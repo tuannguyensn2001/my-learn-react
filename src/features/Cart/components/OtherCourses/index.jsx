@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 import Button from '../Button';
-
+import styled from 'styled-components';
 const otherCoursesClass = styles.other_courses + ' container col-xl-10 offset-xl-1 col-lg-10 col-md-10 col-sm-11';
 const oCourseClass = styles.o_course + ' col-xl-3';
 const oCourseCoverClass = styles['o-course__cover'];
@@ -19,12 +19,27 @@ const popupDesClass = styles.popup__des;
 const popupBottomClass = styles.popup__bottom;
 const popupHeartClass = styles.popup__heart + ' fas fa-heart';
 
+const PopUp = styled.div`
+  
+`
+
+
+const OtherCourse = styled.div`
+  position: relative;
+  
+  &:hover ${PopUp}{
+    display: block;
+  }
+  
+`
+
+
 
 function OtherCourses ({OtherCourses}) {
     return (
         <div className="row container-fluid">
             <div className={otherCoursesClass}>
-                <div className={oCourseClass}>
+                <OtherCourse className={'col-xl-3'}>
                     <div className={oCourseCoverClass}>
                         <a href="#" className={oCoursePicCoverClass}>
                             <img className={oCoursePicClass}
@@ -41,7 +56,7 @@ function OtherCourses ({OtherCourses}) {
                     </div>
 
 
-                    <div className={oCoursePopupClass}>
+                    <PopUp className={oCoursePopupClass}>
                         <div className={popupCoverClass}>
                             <div className={popupNameClass}>Lorem ipsum dolor sit.</div>
                             <ul className={popupDesClass}>
@@ -54,8 +69,8 @@ function OtherCourses ({OtherCourses}) {
                                 <i class={popupHeartClass}></i>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </PopUp>
+                </OtherCourse>
 
             </div>
         </div>
