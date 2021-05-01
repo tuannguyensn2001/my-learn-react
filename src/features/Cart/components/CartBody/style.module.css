@@ -1,0 +1,21 @@
+/* Cart body */
+
+.body__interact-box {
+    display: flex;
+    height: 45px;
+    border: 1px solid #cccccc6b;
+    border-radius: 3px;
+    line-height: 45px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 32px 0;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #bfbfbf;
+    box-shadow: 2px 1px 1px rgb(0 0 0 / 10%);
+}
+
+.checkbox-text {
+    margin-left: 16px;
+}

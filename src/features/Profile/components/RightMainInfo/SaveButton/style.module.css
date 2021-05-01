@@ -1,0 +1,25 @@
+.cover {
+    width: 100%;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.save-btn {
+    all: unset;
+    margin: 0 auto;
+    background-color: #ec5252;
+    color: #fff;
+    padding: 5px 24px;
+    font-size: 1rem;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.save-btn:hover {
+    background-color: #af3c3c;
+}
+
+.save-btn:focus {
+    outline: none;
+}

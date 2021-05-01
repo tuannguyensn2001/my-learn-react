@@ -1,0 +1,49 @@
+.cover_all {
+    border: 1px solid #ccc;
+    height: 100%;
+    padding: 0;
+}
+
+.cover {
+    margin-top: 40px;
+}
+
+.circle-frame {
+    border-radius: 50% 50% 50% 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.nav__list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 36px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #007791;
+}
+
+.nav__item {
+    padding: 8px 0 8px 48px;
+}
+
+.nav__item:hover {
+    background-color: #8a92a3;
+    color: #fff;
+    width: 100%;
+}
