@@ -73,7 +73,7 @@ function LessonPage() {
 
     return (
         <Layout>
-            <Loading loading={isLoading} background="blue" loaderColor="#3498db"/>
+            <Loading loading={isLoading} background="#181823" loaderColor="#3498db"/>
             <LessonProvider value={currentCourse}>
                 <ContentWrapper>
                     <ContentLesson  url={currentLesson.video_url} />

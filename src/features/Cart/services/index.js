@@ -7,3 +7,7 @@ export const addToCart = (data) => {
 export const getCart = () => {
     return myLearn.get('/v1/cart');
 }
+
+export const deleteCourseFromCart = (id) => {
+    return myLearn.delete(`/v1/cart/${id}`);
+}

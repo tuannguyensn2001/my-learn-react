@@ -1,19 +1,44 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {fetchAPIAddToCart} from "../../Cart/slice/cartSlice";
 
 
 export default ({course}) => {
 
+    const [courseBought,setCourseBought] = useState(null);
     const user = useSelector(state => state.auth.user);
     const dispatch = useDispatch();
 
+
+    useEffect(() => {
+        if (!user?.courses) return;
+        setCourseBought(() => {
+            return user.courses.find(item => item.slug === course.slug);
+        })
+    },[course,user])
 
     const handleClickAddToCart = () => {
         dispatch(fetchAPIAddToCart({
             userId: user.id,
             courseId: course.id,
         }))
+    }
+
+    const renderButton = () => {
+        if (!courseBought){
+            return(
+                <div>
+                    <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Add to cart</button>
+                    <button className="bc-btn__buy bc-btn">Buy now</button>
+                </div>
+            )
+        }
+
+        return(
+            <div>
+                Đã mua vào lúc {new Date(courseBought.pivot.created_at).toLocaleDateString()}
+            </div>
+        )
     }
 
 
@@ -35,8 +60,8 @@ export default ({course}) => {
                     <i className="clock-icon fal fa-alarm-clock"></i>
                     1 day left at this price!
                 </div>
-                <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Add to cart</button>
-                <button className="bc-btn__buy bc-btn">Buy now</button>
+
+                {renderButton()}
             </div>
         </div>
     )

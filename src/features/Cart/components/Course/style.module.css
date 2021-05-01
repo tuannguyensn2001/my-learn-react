@@ -5,12 +5,14 @@
     display: flex;
     margin-left: -1px;
     margin-top: -1px;
+
 }
 
 .course__wrap {
     display: flex;
     font-size: 1rem;
     font-weight: 400;
+
 }
 
 .course__checkbox {
@@ -19,7 +21,7 @@
 
 .course__picture {
     margin-right: 16px;
-    width: 150px;
+    width: 100px;
     border-radius: 3px;
 }
 

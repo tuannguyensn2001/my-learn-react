@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Plyr from 'plyr-react';
 import "plyr-react/dist/plyr.css";
 import Proptypes from 'prop-types';
+import ReactPlayer from "react-player/youtube";
 
 
 const VideoContent = styled.div`
@@ -141,7 +142,6 @@ VideoLesson.propTypes = {
 }
 
 
-
 function VideoLesson({url}) {
 
     return (
@@ -154,16 +154,23 @@ function VideoLesson({url}) {
             </PrevLesson>
             <VideoContent>
                 <Video>
-                    <Plyr
-                        source={{
-                            type: "video",
-                            sources: [
-                                {
-                                    src: url || 'PO4Eegb8ZOU',
-                                    provider: "youtube"
-                                }
-                            ]
-                        }}
+                    {/*<Plyr*/}
+                    {/*    source={{*/}
+                    {/*        type: "video",*/}
+                    {/*        sources: [*/}
+                    {/*            {*/}
+                    {/*                src: url || 'PO4Eegb8ZOU',*/}
+                    {/*                provider: "youtube"*/}
+                    {/*            }*/}
+                    {/*        ]*/}
+                    {/*    }}*/}
+                    {/*/>*/}
+                    <ReactPlayer
+                        controls={true}
+                        playing={true}
+                        url={`https://www.youtube.com/watch?v=${url}`}
+                        width='100%'
+                        height='100%'
                     />
                 </Video>
             </VideoContent>
