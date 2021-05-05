@@ -1,7 +1,8 @@
 import React from 'react';
+import UserAccount from '../../components/RightMainInfo/UserAccount';
 
 export default function Account(props){
     return (
-        <h1>Day la account</h1>
+        <UserAccount/>
     )
 }

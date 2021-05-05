@@ -69,7 +69,7 @@
 
             /* other course -- popup */
 
-.o-course::before {
+/* .o-course::before {
     content: "";
     height: 100%;
     width: 30px;
@@ -88,7 +88,7 @@
     border-bottom: 10px solid transparent;   
     border-right:10px solid #fff;
     z-index: 1;
-}
+} */
 
 .o-course__popup {
     position: absolute;

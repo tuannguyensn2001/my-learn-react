@@ -20,7 +20,8 @@ const popupBottomClass = styles.popup__bottom;
 const popupHeartClass = styles.popup__heart + ' fas fa-heart';
 
 const PopUp = styled.div`
-  
+
+
 `
 
 
@@ -30,7 +31,25 @@ const OtherCourse = styled.div`
   &:hover ${PopUp}{
     display: block;
   }
-  
+    &::after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;   
+        border-right:10px solid #fff;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        height: 100%;
+        width: 30px;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+    }
 `
 
 
