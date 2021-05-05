@@ -6,6 +6,7 @@ import {Switch, Route,useRouteMatch} from 'react-router-dom';
 import ProfilePage from "./pages/Profile";
 import Account from "./pages/Account";
 import Avatar from "./pages/Avatar";
+import MyCourse from "./pages/MyCourse/MyCourse";
 
 function Profile()
 {
@@ -17,9 +18,11 @@ function Profile()
                     <div className="col-xl-2">
                         <LeftNavBar/>
                     </div>
-                    <div className="col-xl-10">
+                    <div className="col-xl-1"/>
+                    <div className="col-xl-9">
 
                         <Switch>
+                            <Route path={`${path}/my-courses`} component={MyCourse} />
                             <Route path={`${path}/`} exact component={ProfilePage} />
                             <Route path={`${path}/avatar`} component={Avatar} />
                             <Route path={`${path}/account`} component={Account} />

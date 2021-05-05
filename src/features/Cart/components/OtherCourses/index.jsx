@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import Button from '../Button';
 import styled from 'styled-components';
-const otherCoursesClass = styles.other_courses + ' container col-xl-10 offset-xl-1 col-lg-10 col-md-10 col-sm-11';
+const otherCoursesClass = styles.other_courses + ' col-xl-10  col-lg-10 col-md-10 col-sm-11';
 const oCourseClass = styles.o_course + ' col-xl-3';
 const oCourseCoverClass = styles['o-course__cover'];
 const oCoursePicCoverClass = styles['o-course__pic-cover'];
@@ -37,7 +37,7 @@ const OtherCourse = styled.div`
 
 function OtherCourses ({OtherCourses}) {
     return (
-        <div className="row container-fluid">
+        <div className="row ">
             <div className={otherCoursesClass}>
                 <OtherCourse className={'col-xl-3'}>
                     <div className={oCourseCoverClass}>

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "./Navbar";
 import styled from 'styled-components';
 
+
 const Container = styled.div`
     padding-top: 60px;
 

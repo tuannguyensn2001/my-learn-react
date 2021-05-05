@@ -1,14 +1,57 @@
 import React from 'react';
 import styles from './style.module.css';
-import Button from "../Button";
+import {Button, Modal, notification} from "antd";
+import {buyCourse} from '../../services/index';
+import {useDispatch} from "react-redux";
+import {updateCourse} from "../../../../slice/authSlice";
+
 
 const buyBtnClass = styles['buy-btn'];
-const courseWrapClass = styles.courseWrap + ' col-xl-1';
+const courseWrapClass = styles?.courseWrap + ' col-xl-1';
 const footerTextCoverClass = styles.footer__text_cover + ' col-xl-7';
 const totalPayClass = styles['total-pay'];
-const acceptBuyBtnClass = styles.accept_buy_btn;
 
-function BuyButton ({BuyButton}) {
+const {confirm} = Modal;
+
+function BuyButton({BuyButton, total, buyCourse: actionBuyCourse}) {
+
+    const dispatch = useDispatch();
+
+    const onClickAccept = () => {
+        confirm({
+
+            content: <div>
+                <p>Xác nhận mua khóa học</p>
+                <ul>
+                    {total.map(item => <li key={item.id}>{item.name}</li>)}
+                </ul>
+                <p>Tổng tiền: {total.reduce((total, item) => total + item.price, 0)}</p>
+            </div>,
+            okText: 'Xác nhận',
+            cancelText: 'Hủy',
+            onOk() {
+                buyCourse({
+                    course: total.map(item => item.id)
+                })
+                    .then(response => {
+                        actionBuyCourse(() => {
+                            return {
+                                status: 'success',
+                                message: 'Thành công',
+                                description: 'Bạn đã mua khóa học thành công'
+                            }
+                        })
+                        dispatch(updateCourse({
+                            course: response.data.courses
+                        }))
+                    })
+                    .catch(err => notification['error']({
+                        message: err.response.data.message
+                    }));
+            }
+        })
+    }
+
     return (
         <div className={buyBtnClass}>
             {/* Select all checkbox */}
@@ -22,11 +65,13 @@ function BuyButton ({BuyButton}) {
                 {/* <button className="btn--cart">Xóa</button> */}
             </div>
             <div className={footerTextCoverClass}>
-                Tổng thanh toán (0 sản phẩm):
-                <span className={totalPayClass}>$999.999</span>
+                Tổng thanh toán ({total.length} sản phẩm):
+                <span className={totalPayClass}>{total.reduce((total, item) => {
+                    return total + item.price;
+                }, 0)}</span>
             </div>
             <div className="btn-cover col-xl-2">
-                <Button className={acceptBuyBtnClass}>Mua hàng</Button>
+                <Button onClick={onClickAccept} disabled={total.length === 0}>Mua hàng</Button>
                 {/* <button className="btn--cart accept-buy-btn">Mua Hàng</button> */}
             </div>
         </div>

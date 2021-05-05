@@ -63,7 +63,7 @@ const ButtonIcon = styled.i`
   margin-left: 8px;
 `
 
-function Header() {
+function Header({course}) {
     return (
         <HeaderWrapper className="row head">
             <div className="container col-xl-6 offset-xl-1 col-lg-7 col-md-9 col-sm-10">
@@ -71,12 +71,11 @@ function Header() {
                     <GuideLink href="#" className="guide-link">Lorem, ipsum dolor.</GuideLink>
                     <ForwardArrow className="far fa-chevron-right forward-arrow"/>
                 </div>
-                <HeadTitle className="head__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem.
+                <HeadTitle className="head__title">
+                    {course.name}
                 </HeadTitle>
-                <HeadDes className="head__des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic obcaecati
-                    magni
-                    repudiandae culpa voluptatum perferendis suscipit!
+                <HeadDes className="head__des">
+                    {course.description}
                 </HeadDes>
                 <HeadCreatedBy className="head__created-by">Created by <ProfileLink link href="#" className="profile-link">Jose
                     Portilla</ProfileLink>

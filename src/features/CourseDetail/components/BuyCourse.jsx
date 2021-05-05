@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from "react";
-import {useDispatch,useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchAPIAddToCart} from "../../Cart/slice/cartSlice";
-
+import {Link} from "react-router-dom";
 
 export default ({course}) => {
 
-    const [courseBought,setCourseBought] = useState(null);
+    const [courseBought, setCourseBought] = useState(null);
     const user = useSelector(state => state.auth.user);
+    const cart = useSelector(state => state.cart.courseList);
     const dispatch = useDispatch();
 
 
@@ -15,7 +16,7 @@ export default ({course}) => {
         setCourseBought(() => {
             return user.courses.find(item => item.slug === course.slug);
         })
-    },[course,user])
+    }, [course, user])
 
     const handleClickAddToCart = () => {
         dispatch(fetchAPIAddToCart({
@@ -25,20 +26,24 @@ export default ({course}) => {
     }
 
     const renderButton = () => {
-        if (!courseBought){
-            return(
+        if (!courseBought) {
+            return (
                 <div>
-                    <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Add to cart</button>
+                    {/*<button onClick={handleClickAddToCart} className="bc-btn__add bc-btn"></button>*/}
+                    {cart.find(item => item.id === course.id)
+                        ? <Link className={''} to={'/cart'}>Đi tới giỏ hàng</Link>
+                        : <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Thêm vào giỏ hàng</button>
+                    }
                     <button className="bc-btn__buy bc-btn">Buy now</button>
                 </div>
             )
         }
 
-        return(
-            <div>
-                Đã mua vào lúc {new Date(courseBought.pivot.created_at).toLocaleDateString()}
-            </div>
-        )
+    return(
+        <div>
+            Đã mua vào lúc {new Date(courseBought.pivot.created_at).toLocaleDateString()}
+        </div>
+    )
     }
 
 
@@ -65,4 +70,4 @@ export default ({course}) => {
             </div>
         </div>
     )
-}
+    }

@@ -38,6 +38,7 @@ function LeftNavBar ({LeftNavBar}) {
             </div>
 
             <ul className={navListClass} >
+                <NavLink to={`${path}/my-courses`} >Khóa học của tôi</NavLink>
                 <NavLink to={`${path}/`}>Hồ sơ</NavLink>
                 <NavLink to={`${path}/avatar`} >Ảnh đại diện</NavLink>
                 <NavLink to={`${path}/account`} >Tài khoản</NavLink>

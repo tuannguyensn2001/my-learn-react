@@ -44,7 +44,7 @@ function CourseDetail() {
         <Layout>
             <div className="container-fluid">
             {/* Header */}
-                <Header/>
+                <Header course={currentCourse} />
             {/* End header */}
 
 

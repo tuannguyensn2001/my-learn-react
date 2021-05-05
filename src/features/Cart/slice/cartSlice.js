@@ -31,7 +31,7 @@ const cart = createSlice({
         addCourse(state,action){
             const {course} = action.payload;
             state.courseList.push(course);
-        }
+        },
     },
     extraReducers: {
         [fetchAPIAddToCart.fulfilled]: (state,action) => {
@@ -55,9 +55,8 @@ const cart = createSlice({
             state.courseList.splice(index,1);
             state.isLoading = false;
             notification['success']({
-                message: 'Notification Title',
-                description:
-                    'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+                message: 'Xóa thành công',
+                description: null,
             });
         },
         [fetchAPIDeleteCourseFromCart.rejected]: (state,action) => {
