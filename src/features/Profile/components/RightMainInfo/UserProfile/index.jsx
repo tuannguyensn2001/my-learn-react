@@ -20,16 +20,21 @@ function UserProfile ({UserProfile}) {
             </div>
             <div className={lineBreakClass}></div>
             <div className={inputSectionClass}>
-                {/*<SubHeading>Thong tin ca nhan</SubHeading>*/}
-                {/*<TextInsert>Nam dep trai</TextInsert>*/}
-                {/*<TextInsert>Vai lon</TextInsert>*/}
-                {/*<TextInsert></TextInsert>*/}
-                {/*<TextInsert></TextInsert>*/}
-                {/*<TextInsert></TextInsert>*/}
-                {/*<SaveButton></SaveButton>*/}
-
+                <SubHeading>Họ</SubHeading>
                 <Input/>
-
+                <SubHeading>Tên</SubHeading>
+                <Input/>
+                {/* <SubHeading>Chức danh</SubHeading>
+                <Input/> */}
+                <SubHeading>Vai trò</SubHeading>
+                <select name="role" id="role">
+                    <option value="teacher">Giáo viên</option>
+                    <option value="student">Học viên</option>
+                    <option value="other">Khác</option>
+                </select>
+                <SubHeading>Mô tả về bản thân</SubHeading>
+                <Input/>
+                <SaveButton></SaveButton>
             </div>
         </div>
     )

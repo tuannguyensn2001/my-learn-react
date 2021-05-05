@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AccountForm/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AccountForm/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AvatarFrame/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AvatarFrame/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserAccount/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserAvatar/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/BuyButton/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/BuyButton/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slice/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slice/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SaveButton/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SaveButton/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SubHeading/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SubHeading/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserProfile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserProfile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/pages/Account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/pages/Account/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Profile/pages/Avatar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/pages/Avatar/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chess" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -95,6 +95,7 @@
       <workItem from="1620049215600" duration="15000" />
       <workItem from="1620092677742" duration="1298000" />
       <workItem from="1620214371262" duration="266000" />
+      <workItem from="1620224124744" duration="2943000" />
     </task>
     <servers />
   </component>
