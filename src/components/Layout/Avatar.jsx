@@ -88,7 +88,8 @@ function Avatar(props) {
             <AvatarWrapper onClick={() => setIsOpen((prevState) => !prevState)}>
 
                 <AvatarAntd
-                    src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.6435-9/149042797_2797977147136560_97490099559862791_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=DeTHIC3FWMMAX-MTonz&_nc_ht=scontent-hkt1-1.xx&oh=1a01931737480f968a9a26f911c653ac&oe=609DB3DC"/>
+                src={'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2018_04_28/image001_2.jpg'}
+                />
             </AvatarWrapper>
 
 

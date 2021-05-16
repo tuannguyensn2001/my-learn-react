@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {useSelector} from "react-redux";
 import Avatar from "./Avatar";
+import useLocalization from "../../hooks/useLocalization";
 
 
 const Nav = styled.nav`
   width: 100%;
-  background-color: black;
+  background-color: ${props => props.color};
   position: fixed;
   height: 60px;
   z-index: 99;
@@ -26,6 +27,9 @@ const IconToggle = styled.i`
 const NavItemLink = styled(Link)`
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-weight: 600;
 
   &:hover {
     color: #fff;
@@ -50,28 +54,34 @@ const AvatarWrapper = styled.div`
 
 
 function Navbar() {
+    const {trans} = useLocalization();
     const [menu] = useState({
         category: [
             {
                 path: '/',
-                title: 'Trang chủ'
+                title: trans('navbar.home')
             },
             {
                 path: '/courses',
-                title: 'Khóa học'
+                title: trans('navbar.course')
+            },
+            {
+                path: '/classroom',
+                title: trans('navbar.classroom')
             }
         ],
         auth: [
             {
                 path: '/auth/login',
-                title: 'Đăng nhập'
+                title:  trans('navbar.login')
             },
             {
                 path: '/auth/register',
-                title: 'Đăng ký'
-            }
+                title:  trans('navbar.signup')
+            },
         ]
     });
+    const [colorNav,setColorNav] = useState('black');
 
     const authUser = useSelector(state => state.auth);
     const courseList = useSelector(state => state.cart.courseList);
@@ -84,6 +94,13 @@ function Navbar() {
     useEffect(() => {
         console.log('courseList', courseList)
     }, [courseList]);
+
+    useEffect(() => {
+        window.addEventListener('scroll',event => {
+            const test = event.target;
+            console.log(event);
+        })
+    },[])
 
 
     const listItemMenuCategory = menu.category.map(item => {
@@ -115,7 +132,7 @@ function Navbar() {
 
 
     return (
-        <Nav className="navbar navbar-expand-lg  ">
+        <Nav color={colorNav} className="navbar navbar-expand-lg  ">
             <div className="container-fluid">
                 <Logo className="navbar-brand" to='/'><LogoImg
                     src="https://fullstack.edu.vn/assets/images/f8_text_logo.png" alt=""/></Logo>

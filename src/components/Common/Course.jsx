@@ -9,16 +9,28 @@ const CourseItem = styled.div`
   height: 400px;
   background: #fff;
   box-shadow: 0px 10px 23px -8px rgb(0 0 0 / 11%);
+  overflow: hidden;
 `
 
 const ThumbnailWrapper = styled.div`
   height: 50%;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  
 `
 
 const Thumbnail = styled.img`
   width: 100%;
   height: 100%;
+
+  
+  
+  &:hover{
+    transform: scale(1.2);
+    transition: all .3s ease;
+  }
 `
 
 const Category = styled(Link)`
@@ -26,8 +38,8 @@ const Category = styled(Link)`
   left: 20px;
   background: #4986fc;
   color: #fff;
-  bottom: -10px;
-  z-index: 1;
+  bottom: 0px;
+  z-index: 9999;
   padding: 2px 10px;
   font-weight: 500;
   font-size: 16px;

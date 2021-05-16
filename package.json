@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@reduxjs/toolkit": "^1.5.0",
     "@rocketseat/react-plyr": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.9",
@@ -11,12 +12,14 @@
     "antd": "^4.12.2",
     "axios": "^0.21.1",
     "history": "^5.0.0",
+    "i18next": "^20.2.4",
     "jsonwebtoken": "^8.5.1",
     "plyr-react": "^3.0.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-fullscreen-loading": "0.0.4",
+    "react-i18next": "^11.8.15",
     "react-player": "^2.9.0",
     "react-plyr": "^2.2.0",
     "react-redux": "^7.2.2",
@@ -52,6 +55,8 @@
   },
   "devDependencies": {
     "customize-cra": "^1.0.0",
+    "i18next-browser-languagedetector": "^6.1.1",
+    "i18next-http-backend": "^1.2.4",
     "react-app-rewired": "^2.1.8"
   }
 }

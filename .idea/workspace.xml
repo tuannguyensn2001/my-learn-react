@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AccountForm/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AccountForm/style.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AvatarFrame/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/AvatarFrame/style.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserAccount/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserAvatar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/LeftNavBar/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SaveButton/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SaveButton/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SubHeading/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/SubHeading/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserProfile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/components/RightMainInfo/UserProfile/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/pages/Account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/pages/Account/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Profile/pages/Avatar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Profile/pages/Avatar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Course.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Course.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Description.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Lesson/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -95,7 +90,22 @@
       <workItem from="1620049215600" duration="15000" />
       <workItem from="1620092677742" duration="1298000" />
       <workItem from="1620214371262" duration="266000" />
-      <workItem from="1620224124744" duration="2943000" />
+      <workItem from="1620224124744" duration="3771000" />
+      <workItem from="1620309931787" duration="750000" />
+      <workItem from="1620311041226" duration="596000" />
+      <workItem from="1620318968246" duration="2000" />
+      <workItem from="1620354282460" duration="2000" />
+      <workItem from="1620382577117" duration="2000" />
+      <workItem from="1620397684839" duration="4000" />
+      <workItem from="1620475292558" duration="1000" />
+      <workItem from="1620476661172" duration="7000" />
+      <workItem from="1620484873649" duration="45000" />
+      <workItem from="1621076879965" duration="2140000" />
+      <workItem from="1621130427359" duration="7806000" />
+      <workItem from="1621156839173" duration="6000" />
+      <workItem from="1621158225665" duration="952000" />
+      <workItem from="1621160122243" duration="2847000" />
+      <workItem from="1621171739616" duration="594000" />
     </task>
     <servers />
   </component>

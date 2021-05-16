@@ -47,6 +47,7 @@ function LessonPage() {
         if (response.status !== 'fulfilled') return;
 
         setCurrentLesson(response.value.data.data);
+        document.title = response.value.data.data.name;
     }
 
     const handleCourseResponse = response => {
@@ -68,6 +69,8 @@ function LessonPage() {
                 }
             })
         });
+
+
     }
 
 
