@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Course.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Course.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/components/OtherCourses/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Body.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/BuyCourse.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Description.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/components/Instructor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/components/Instructor.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Lesson/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Lesson/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/CourseDetail/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CourseDetail/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/en/translation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/en/translation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/vi/translation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/vi/translation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +108,7 @@
       <workItem from="1621156839173" duration="6000" />
       <workItem from="1621158225665" duration="952000" />
       <workItem from="1621160122243" duration="2847000" />
-      <workItem from="1621171739616" duration="594000" />
+      <workItem from="1621171739616" duration="2915000" />
     </task>
     <servers />
   </component>

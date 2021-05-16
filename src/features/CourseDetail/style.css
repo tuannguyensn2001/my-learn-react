@@ -112,12 +112,6 @@
 /* Media queries */
 
 @media (max-width: 768px) {
-  .des-box {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
   .body__cover {
     display: unset;
   }
@@ -138,7 +132,7 @@
 
 /* Buy-course bar */
 
-.buy-course {
+/* .buy_course {
   position: fixed;
   top: 96px;
   z-index: 1;
@@ -147,15 +141,24 @@
   box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
   border-radius: 4px;
   background-color: #fff;
-}
+} */
 
       /* Video */
 .buy-course__video {
   border-radius: 2px;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
   margin: 12px 0;
-  height: 209px;
-  /* Temporally video css below */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+}
+
+.course-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
       /* Price, sale */
 .buy-course__cover {
@@ -279,56 +282,42 @@
 
         /* Instructor's information */
 
-.instructor {
-  margin-top: 36px;
+/* .instructor {
+  
 }
 
 .ins__title {
-  font-size: 1.5rem;
-  font-weight: 700;
+
 }
 
 .ins__cover {
-  padding-top: 12px;
 }
 
 .ins__name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #5624d0;
+
 }
 
 .ins__pos {
-  font-size: 1rem;
+
 }
 
 .ins__info {
-  display: flex;
-  margin-top: 8px;
+
 }
 
 .ins__picture {
-  border-radius: 50%;
-  width: 120px;
+
 }
 
 .ins__overview {
-  text-transform: capitalize;
-  margin-left: 28px;
-  font-size: 1rem;
-}
 
+}
 .overview__info {
-  line-height: 30px;
 }
 
 .overview__icon {
-  color: #e59819;
-  width: 32px;
+
 }
 
 .ins__des {
-  margin-top: 8px;
-  text-indent: 16px;
-  padding-bottom: 64px;
-}
+} */

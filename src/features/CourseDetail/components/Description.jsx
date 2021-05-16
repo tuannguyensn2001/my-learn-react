@@ -37,16 +37,16 @@ const ReadMore = styled.button`
   font-size: 1rem;
   font-weight: 600;
   background-color: transparent;
-  
+
   &:hover{
     color: #401b9c;
   }
-  
+
   &:focus{
     outline: none;
   }
 `
-export default ({content}) => {
+export default () => {
 
     const [isOpen,setIsOpen] = useState(false);
 
@@ -62,7 +62,7 @@ export default ({content}) => {
         if (isOpen){
             return(
                 <div>
-                    Show less
+                    Ẩn bớt
                     <i className="fal fa-caret-up"/>
                 </div>
             )
@@ -70,22 +70,42 @@ export default ({content}) => {
 
         return(
             <div>
-                Read more
+                Xem thêm
                 <i className="fal fa-caret-down"/>
             </div>
         )
     }
 
     return (
-        <DescriptionDefault className="description container col-xl-6 offset-xl-1 col-lg-7 col-md-9 col-sm-10">
+        <DescriptionDefault className="description container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
             <DescriptionCover isOpen={isOpen} className="description__cover">
-                <DescriptionTitle className="description__title">Description</DescriptionTitle>
-                {content}
+                <DescriptionTitle className="description__title">Mô tả về khóa học</DescriptionTitle>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nam. Dolorum aspernatur deserunt
+                adipisci laborum optio eius iusto ullam ab quibusdam excepturi, tempore sapiente, nemo minus quidem
+                expedita quo unde! Recusandae tenetur amet odio veritatis eos. Deserunt sed soluta pariatur veritatis?
+                Eligendi a quod officia. Officia non delectus soluta voluptates. Nihil aut, veritatis debitis eum,
+                dolores optio maxime ab hic dolore omnis laboriosam molestiae cumque atque! Ipsam obcaecati veritatis
+                recusandae nam a, vitae, assumenda nemo nesciunt officiis quod commodi culpa? Quidem architecto omnis
+                reprehenderit doloremque cum qui aliquam aspernatur dignissimos autem optio nesciunt, inventore, nihil
+                vel, ipsa quasi sint blanditiis quam. Fuga aut numquam eos, hic officiis non alias velit laudantium
+                dicta repellendus accusantium assumenda itaque cupiditate officia. Quae neque recusandae minima sequi,
+                saepe et totam voluptate esse unde soluta suscipit illum nesciunt cum quaerat libero dignissimos, modi
+                amet ullam vero inventore, quo eos delectus ab! Quae quo neque hic dolore necessitatibus reprehenderit,
+                suscipit aliquam sequi accusamus delectus molestiae, id asperiores doloremque! Aperiam dolorum, aliquam
+                illo et ad exercitationem? Recusandae laborum qui velit, asperiores voluptate inventore nulla maxime
+                beatae aperiam quibusdam soluta voluptas earum molestiae laboriosam dicta saepe molestias tenetur
+                facere. Incidunt amet aut aspernatur, ratione aliquid impedit nihil consectetur consequuntur adipisci
+                modi quis aliquam itaque voluptatem optio architecto voluptatum totam pariatur illum ex ipsa quae vitae
+                enim alias! Veniam eaque ipsam dignissimos ratione nobis quo neque blanditiis delectus eum tempora quod,
+                natus quibusdam voluptatibus velit soluta veritatis facilis? In, nesciunt exercitationem eum soluta sunt
+                quis, mollitia sed impedit ab ratione cupiditate et! Rerum, dignissimos et similique beatae eum omnis.
+                Quod fugit ea distinctio, minus quos culpa, accusantium debitis quasi sapiente aspernatur molestias
+                neque sint non vero rerum cum dignissimos dolores, quam possimus odio iure. Tenetur vitae porro deleniti
+                repudiandae, cumque commodi similique veritatis quidem, suscipit recusandae odit, alias nihil?
             </DescriptionCover>
-
-            {/*<ReadMore onClick={handleOnClick} className="read-more">*/}
-            {/*    {render()}*/}
-            {/*</ReadMore>*/}
+            <ReadMore onClick={handleOnClick} className="read-more">
+                {render()}
+            </ReadMore>
 
         </DescriptionDefault>
     )

@@ -1,5 +1,6 @@
 import {React, useEffect, useState} from 'react';
 import styled from "styled-components";
+import useLocalization from "../../../hooks/useLocalization";
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -21,26 +22,30 @@ const BannerContent = styled.div`
 
 function Banner() {
     const [height, setHeight] = useState(window.innerHeight);
+    const {trans,i18n} = useLocalization();
 
     useEffect(() => {
         window.addEventListener('resize', event => setHeight(event.target.innerHeight))
     }, [height])
+
+
 
     return (
         <div>
             <BannerWrapper height={`${height - 60}px`}>
                     <div>
                         <BannerContent>
-                            <h4>Chào mừng đến với MyLearn !</h4>
+                            <h4>{trans('banner.welcome')}</h4>
                             <h1>Nền tảng học trực tuyến</h1>
                             <div>
-                                <button className="btn btn-success">Khóa học</button>
+                                <button onClick={() => i18n.changeLanguage('en')}   className="btn btn-success">Đổi ngôn ngữ</button>
                                 <button className="btn btn-success">Về chúng tôi</button>
                             </div>
                         </BannerContent>
                     </div>
             </BannerWrapper>
         </div>
+
     )
 }
 

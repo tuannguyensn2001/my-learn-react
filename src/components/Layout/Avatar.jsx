@@ -11,8 +11,17 @@ const ListMenu = styled.div`
   position: absolute;
   background-color: #fff;
   top: 40px;
-  right: 20px;
+  right: 16px;
+  width: 10rem;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+`
 
+const SubListMenu = styled.ul`
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-size: .9rem;
 `
 
 const Wrapper = styled.div`
@@ -33,8 +42,11 @@ const AvatarWrapper = styled.div`
 `
 
 const MenuItem = styled.li`
+  padding: 1rem 0;
+  width: 100%;
   &:hover {
     cursor: pointer;
+    background: #ccc;
   }
 `
 
@@ -97,12 +109,12 @@ function Avatar(props) {
                 display: isOpen ? 'block' : 'none'
             }
             }>
-                <ul>
+                <SubListMenu>
                     <MenuItem>
                         <Link to={'/profile'}>Thông tin cá nhân</Link>
                     </MenuItem>
                     <MenuItem onClick={confirmLogout}>Đăng xuất</MenuItem>
-                </ul>
+                </SubListMenu>
             </ListMenu>
         </Wrapper>
     )
