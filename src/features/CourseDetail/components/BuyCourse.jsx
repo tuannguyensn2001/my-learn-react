@@ -2,6 +2,23 @@ import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAPIAddToCart} from "../../Cart/slice/cartSlice";
 import {Link} from "react-router-dom";
+import styled from 'styled-components';
+import styles from './style.module.css';
+
+const BuyCourseClass = styles.buy_course + ' container col-xl-3 offset-xl-8';
+
+const BuyCourse = styled.div`
+    position: fixed;
+    /* display: none; */
+    top: 96px;
+    z-index: 1;
+    border-bottom: 1px solid #d1d7dc;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    border-radius: 4px;
+    background-color: #fff;
+`
+
 
 export default ({course}) => {
 
@@ -48,10 +65,10 @@ export default ({course}) => {
 
 
     return(
-        <div className="buy-course container col-xl-3 offset-xl-8">
+        <BuyCourse className={BuyCourseClass}>
             <div className="buy-course__video">
                 {/* Put the video here */}
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/b7ffmtnuSGM"
+                <iframe className="course-video" src="https://www.youtube.com/embed/b7ffmtnuSGM"
                         title="YouTube video player" frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
@@ -68,6 +85,6 @@ export default ({course}) => {
 
                 {renderButton()}
             </div>
-        </div>
+        </BuyCourse>
     )
     }

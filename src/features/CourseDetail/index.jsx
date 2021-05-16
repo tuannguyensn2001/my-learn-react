@@ -64,7 +64,7 @@ function CourseDetail() {
             {/* End buy course bar */}
 
 
-            <div className="row col-xl-6 offset-xl-1 col-lg-7 col-md-9 col-sm-10">
+            <div className="container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
                 <div>
                     {renderRoadMap}
                 </div>

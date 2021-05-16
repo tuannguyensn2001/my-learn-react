@@ -62,7 +62,7 @@ export default () => {
         if (isOpen){
             return(
                 <div>
-                    Show less
+                    Ẩn bớt
                     <i className="fal fa-caret-up"/>
                 </div>
             )
@@ -70,16 +70,16 @@ export default () => {
 
         return(
             <div>
-                Read more
+                Xem thêm
                 <i className="fal fa-caret-down"/>
             </div>
         )
     }
 
     return (
-        <DescriptionDefault className="description container col-xl-6 offset-xl-1 col-lg-7 col-md-9 col-sm-10">
+        <DescriptionDefault className="description container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
             <DescriptionCover isOpen={isOpen} className="description__cover">
-                <DescriptionTitle className="description__title">Description</DescriptionTitle>
+                <DescriptionTitle className="description__title">Mô tả về khóa học</DescriptionTitle>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nam. Dolorum aspernatur deserunt
                 adipisci laborum optio eius iusto ullam ab quibusdam excepturi, tempore sapiente, nemo minus quidem
                 expedita quo unde! Recusandae tenetur amet odio veritatis eos. Deserunt sed soluta pariatur veritatis?
@@ -103,11 +103,6 @@ export default () => {
                 neque sint non vero rerum cum dignissimos dolores, quam possimus odio iure. Tenetur vitae porro deleniti
                 repudiandae, cumque commodi similique veritatis quidem, suscipit recusandae odit, alias nihil?
             </DescriptionCover>
-            {/* Tao cần 1 đoạn script để:
-                1. bỏ overflow: hidden trong .description__cover
-                2. bỏ background trong .description__cover:before
-                3. display: none; cho .read-more
-                    khi click chuột vào thẻ a ở dưới */}
             <ReadMore onClick={handleOnClick} className="read-more">
                 {render()}
             </ReadMore>

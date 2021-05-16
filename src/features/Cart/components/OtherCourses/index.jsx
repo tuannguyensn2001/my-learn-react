@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import Button from '../Button';
 import styled from 'styled-components';
-const otherCoursesClass = styles.other_courses + ' col-xl-10  col-lg-10 col-md-10 col-sm-11';
+const otherCoursesClass = styles.other_courses + ' col-xl-10 col-lg-6 col-md-6 col-sm-12';
 const oCourseClass = styles.o_course + ' col-xl-3';
 const oCourseCoverClass = styles['o-course__cover'];
 const oCoursePicCoverClass = styles['o-course__pic-cover'];
