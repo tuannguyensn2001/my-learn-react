@@ -94,11 +94,11 @@
     position: absolute;
     top: 0;
     left: 103%;
-    width: 100%;
+    width: 110%;
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 1px solid #ccc;
-     display: none;
+    display: none;
 }
 
 .popup__cover {
@@ -137,5 +137,6 @@
     cursor: pointer;
     color: #8841b5;
 }
+
 
             /* end other course -- popup */

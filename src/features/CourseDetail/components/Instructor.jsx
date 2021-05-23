@@ -2,12 +2,14 @@ import React from "react";
 import Layout from "../../../components/Layout";
 import styled from 'styled-components';
 import styles from './style.module.css';
+import useLocalization from '../../../hooks/useLocalization';
 
 const insInfoClass = styles['ins__info'];
 const overviewClass = styles['ins__overview'];
 
 const Instructor = styled.div`
     margin-top: 36px;
+    padding: 0;
 `
 
 const InsTitle = styled.div`
@@ -61,9 +63,12 @@ const InsDes = styled.div`
 `
 
 export default () => {
+
+    const {trans} = useLocalization();
+
     return(
         <Instructor className="instructor container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
-            <InsTitle className="ins__title">Giảng viên</InsTitle>
+            <InsTitle className="ins__title">{trans('courseDetailInstructor.title')}</InsTitle>
             <InsCover className="ins__cover">
                 <div className="ins__name-cover">
                     <InsName className="ins__name">Jose Portilla</InsName>

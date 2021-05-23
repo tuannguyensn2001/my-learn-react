@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Course from "../../../components/Common/Course";
 import {getCourses} from "../../../services/courseServices";
 import useCourse from "../../../hooks/useCourse";
+import useLocalization from '../../../hooks/useLocalization';
+
 
 const CourseWrapper = styled.div`
   display: flex;
@@ -20,6 +22,11 @@ const CourseContent = styled.div`
 const Slogan = styled.div`
   color: #6b6bf3;
   font-weight: bold;
+  text-transform: uppercase;
+`
+
+const Title = styled.h1`
+    font-weight: 600;
 `
 
 function CourseBanner()
@@ -35,6 +42,8 @@ function CourseBanner()
     //        .catch(err => console.log(err));
     // },[])
 
+    const {trans} = useLocalization();
+
     const {courses,setCourses} = useCourse();
 
     const renderCourse = courses.map(course => {
@@ -49,8 +58,8 @@ function CourseBanner()
         <div className="container">
             <CourseWrapper>
                 <CourseContent>
-                    <Slogan>HÃY BẮT ĐẦU NGAY TỪ HÔM NAY</Slogan>
-                    <h1>Khóa học nổi bật</h1>
+                    <Slogan>{trans('courseBanner.slogan')}</Slogan>
+                    <Title>{trans('courseBanner.title')}</Title>
                 </CourseContent>
             </CourseWrapper>
 

@@ -15,9 +15,49 @@ const BannerWrapper = styled.div`
 `
 
 const BannerContent = styled.div`
-  color: #fffcfc;
   font-weight: 600;
   text-align: center;
+`
+const BannerWelcome = styled.h2`
+    color: #fff;
+    text-shadow: 0 0 6px rgb(0 0 0);
+    font-weight: 500;
+`
+
+const BannerTitle = styled.h1`
+    color: #fff;
+    text-shadow: 0 0 6px rgb(0 0 0);
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 700;
+`
+
+const BannerButtonCover = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+`
+
+const BannerButton = styled.button`
+    all: unset;
+    background-color: rgba(255 255 255 / 10%);
+    border: 1px solid rgba(255 255 255 / 80%);
+    color: #fff;
+    padding: .8rem;
+    margin-top: 2px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 20px;
+    width: 60%;
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &:hover {
+        text-shadow: 0 0 6px rgb(0 0 0);
+        backdrop-filter: contrast(.5);
+    }
 `
 
 function Banner() {
@@ -35,12 +75,12 @@ function Banner() {
             <BannerWrapper height={`${height - 60}px`}>
                     <div>
                         <BannerContent>
-                            <h4>{trans('banner.welcome')}</h4>
-                            <h1>Nền tảng học trực tuyến</h1>
-                            <div>
-                                <button onClick={() => i18n.changeLanguage('en')}   className="btn btn-success">Đổi ngôn ngữ</button>
-                                <button className="btn btn-success">Về chúng tôi</button>
-                            </div>
+                            <BannerWelcome>{trans('banner.welcome')}</BannerWelcome>
+                            <BannerTitle>{trans('banner.web_name')}</BannerTitle>
+                            <BannerButtonCover>
+                                <BannerButton onClick={() => i18n.changeLanguage('en')}>{trans('banner.change_language')}</BannerButton>
+                                <BannerButton>{trans('banner.about')}</BannerButton>
+                            </BannerButtonCover>
                         </BannerContent>
                     </div>
             </BannerWrapper>

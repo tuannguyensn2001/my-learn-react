@@ -10,7 +10,7 @@ function Home() {
     const {trans} = useLocalization();
 
     useEffect(() => {
-        document.title = 'Trang chu';
+        document.title = trans('homeTitle.title');
     },[])
 
     return (

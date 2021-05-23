@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Layout from "../../../components/Layout";
 import styled from "styled-components";
+import useLocalization from '../../../hooks/useLocalization';
 
 
 const DescriptionCover = styled.div`
@@ -8,6 +9,8 @@ const DescriptionCover = styled.div`
   position: relative;
   overflow: hidden;
   margin-bottom: 16px;
+  font-size: 1rem;
+
 
   &:before {
     content: '';
@@ -23,6 +26,7 @@ const DescriptionCover = styled.div`
 
 const DescriptionDefault = styled.div`
   margin-top: 32px;
+  padding: 0;
 `
 const DescriptionTitle = styled.div`
   font-size: 1.5rem;
@@ -48,6 +52,8 @@ const ReadMore = styled.button`
 `
 export default () => {
 
+    const {trans} = useLocalization();
+
     const [isOpen,setIsOpen] = useState(false);
 
 
@@ -62,7 +68,7 @@ export default () => {
         if (isOpen){
             return(
                 <div>
-                    Ẩn bớt
+                    {trans('courseDetailDes.showLess')}
                     <i className="fal fa-caret-up"/>
                 </div>
             )
@@ -70,7 +76,7 @@ export default () => {
 
         return(
             <div>
-                Xem thêm
+                {trans('courseDetailDes.seeMore')}
                 <i className="fal fa-caret-down"/>
             </div>
         )
@@ -79,7 +85,7 @@ export default () => {
     return (
         <DescriptionDefault className="description container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
             <DescriptionCover isOpen={isOpen} className="description__cover">
-                <DescriptionTitle className="description__title">Mô tả về khóa học</DescriptionTitle>
+                <DescriptionTitle className="description__title">{trans('courseDetailDes.title')}</DescriptionTitle>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nam. Dolorum aspernatur deserunt
                 adipisci laborum optio eius iusto ullam ab quibusdam excepturi, tempore sapiente, nemo minus quidem
                 expedita quo unde! Recusandae tenetur amet odio veritatis eos. Deserunt sed soluta pariatur veritatis?

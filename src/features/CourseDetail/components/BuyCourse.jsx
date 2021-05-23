@@ -4,6 +4,7 @@ import {fetchAPIAddToCart} from "../../Cart/slice/cartSlice";
 import {Link} from "react-router-dom";
 import styled from 'styled-components';
 import styles from './style.module.css';
+import useLocalization from '../../../hooks/useLocalization';
 
 const BuyCourseClass = styles.buy_course + ' container col-xl-3 offset-xl-8';
 
@@ -21,6 +22,8 @@ const BuyCourse = styled.div`
 
 
 export default ({course}) => {
+
+    const {trans} = useLocalization();
 
     const [courseBought, setCourseBought] = useState(null);
     const user = useSelector(state => state.auth.user);
@@ -48,17 +51,17 @@ export default ({course}) => {
                 <div>
                     {/*<button onClick={handleClickAddToCart} className="bc-btn__add bc-btn"></button>*/}
                     {cart.find(item => item.id === course.id)
-                        ? <Link className={''} to={'/cart'}>Đi tới giỏ hàng</Link>
-                        : <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">Thêm vào giỏ hàng</button>
+                        ? <Link className={''} to={'/cart'}>{trans('courseDetailBuyCourse.goToCart')}</Link>
+                        : <button onClick={handleClickAddToCart} className="bc-btn__add bc-btn">{trans('courseDetailBuyCourse.addToCart')}</button>
                     }
-                    <button className="bc-btn__buy bc-btn">Buy now</button>
+                    <button className="bc-btn__buy bc-btn">{trans('courseDetailBuyCourse.buy')}</button>
                 </div>
             )
         }
 
     return(
         <div>
-            Đã mua vào lúc {new Date(courseBought.pivot.created_at).toLocaleDateString()}
+            {trans('courseDetailBuyCourse.boughtOn')} {new Date(courseBought.pivot.created_at).toLocaleDateString()}
         </div>
     )
     }
@@ -80,7 +83,7 @@ export default ({course}) => {
                 </div>
                 <div className="bc-cover__sale-time">
                     <i className="clock-icon fal fa-alarm-clock"></i>
-                    1 day left at this price!
+                    {trans('courseDetailBuyCourse.daysLeft')}
                 </div>
 
                 {renderButton()}

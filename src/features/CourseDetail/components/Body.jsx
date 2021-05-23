@@ -1,10 +1,13 @@
 import React from "react";
+import useLocalization from '../../../hooks/useLocalization';
 
 export default () => {
+
+    const {trans} = useLocalization();
+
     return(
-        <div className="row">
             <div className="des-box container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
-                <div className="des-box__heading">Bạn sẽ nhận được gì sau khóa học này?</div>
+                <div className="des-box__heading">{trans('courseDetailBody.title')}</div>
                 <div className="des-box__body">
                     <div className="body__cover">
                         <div className="body__cover-col">
@@ -24,6 +27,5 @@ export default () => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

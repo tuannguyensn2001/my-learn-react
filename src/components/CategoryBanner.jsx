@@ -19,6 +19,7 @@ const CategoryContent = styled.div`
 const Slogan = styled.div`
   color: #6b6bf3;
   font-weight: bold;
+  text-transform: uppercase;
 `
 
 const ListCategory = styled.div`

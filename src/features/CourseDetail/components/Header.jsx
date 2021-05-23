@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import styles from './style.module.css';
+import useLocalization from '../../../hooks/useLocalization';
 
 const videoWrapperClass = styles['videoWrapper'];
 const headButtonsClass = styles['head__buttons'];
@@ -63,11 +64,13 @@ const HeadDes = styled.div`
 `
 
 const HeadCreatedBy = styled.div`
+  display: flex;
   font-size: 1rem;
   font-weight: 300;
+  flex-direction: column;
 `
 
-const ProfileLink = styled.div`
+const ProfileLink = styled.a`
   text-decoration: underline;
   color: #b7a9e5;
 `
@@ -81,6 +84,11 @@ const MobileBuyBtn = styled.div`
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #9a1515;
+  }
 `
 
 const HeadButton = styled.div`
@@ -98,6 +106,11 @@ const Button = styled.div`
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
+  
+  &:hover {
+    backdrop-filter: contrast(0.5);
+  }
 `
 
 const ButtonIcon = styled.i`
@@ -106,6 +119,9 @@ const ButtonIcon = styled.i`
 
 
 function Header({course}) {
+
+    const {trans} = useLocalization();
+
     return (
         <HeaderWrapper className={"row head"}>
             <div className="container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
@@ -125,14 +141,14 @@ function Header({course}) {
                 <HeadDes className={headDescriptionClass}>
                     {course.description}
                 </HeadDes>
-                <HeadCreatedBy className={headCreatedByClass}>Giảng viên<ProfileLink link href="#" className="profile-link">Jose
+                <HeadCreatedBy className={headCreatedByClass}>{trans('courseDetailHeader.teacher')}<ProfileLink link href="#" className="profile-link">Jose
                     Portilla</ProfileLink>
                 </HeadCreatedBy>
-                <MobileBuyBtn className={mobileBtnClass}>Thêm vào giỏ hàng</MobileBuyBtn>
+                <MobileBuyBtn className={mobileBtnClass}>{trans('courseDetailHeader.mobileBuyButton')}</MobileBuyBtn>
                 <HeadButton className={headButtonsClass}>
-                  <Button className={buttonsBtnClass}>Yêu thích<ButtonIcon className="far fa-heart buttons__icon"/></Button>
-                  <Button className={buttonsBtnClass}>Chia sẻ<ButtonIcon className="fal fa-share buttons__icon"/></Button>
-                  <Button className={buttonsBtnClass}>Tặng khóa học</Button>
+                  <Button className={buttonsBtnClass}>{trans('courseDetailHeader.favorite')}<ButtonIcon className="far fa-heart buttons__icon"/></Button>
+                  <Button className={buttonsBtnClass}>{trans('courseDetailHeader.share')}<ButtonIcon className="fal fa-share buttons__icon"/></Button>
+                  <Button className={buttonsBtnClass}>{trans('courseDetailHeader.gift')}</Button>
                 </HeadButton>
             </div>
         </HeaderWrapper>

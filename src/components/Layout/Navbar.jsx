@@ -11,11 +11,11 @@ const Nav = styled.nav`
   background-color: ${props => props.color};
   position: fixed;
   height: 60px;
-  z-index: 99;
+  z-index: 2;
 `
 
 const Menu = styled.ul`
-
+    background-color: #000;
 `
 
 
@@ -54,13 +54,13 @@ const AvatarWrapper = styled.div`
 
 
 function Navbar() {
-    const {trans} = useLocalization();
+    const {trans,i18n} = useLocalization();
     const [menu] = useState({
         category: [
             {
                 path: '/',
                 title: trans('navbar.home')
-            },
+            },  
             {
                 path: '/courses',
                 title: trans('navbar.course')

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Avatar as AvatarAntd, Modal, notification} from "antd";
 import {useHistory} from 'react-router-dom';
 import {useDispatch} from "react-redux";
+import useLocalization from '../../hooks/useLocalization';
 
 
 
@@ -54,6 +55,9 @@ const {confirm} = Modal;
 
 
 function Avatar(props) {
+
+    const {trans} = useLocalization();
+
     const [isOpen, setIsOpen] = useState(false);
 
     const dispatch = useDispatch();
@@ -68,9 +72,9 @@ function Avatar(props) {
 
     const confirmLogout = () => {
         confirm({
-            content: 'Bạn chắc chắn muốn đăng xuất ?',
-            okText: 'Đồng ý',
-            cancelText: 'Hủy',
+            content: trans('layoutAvatar.content'),
+            okText: trans('layoutAvatar.okText'),
+            cancelText: trans('layoutAvatar.cancelText'),
             onOk() {
                 // localStorage.removeItem('user_token');
                 // history.push('/');
@@ -80,7 +84,7 @@ function Avatar(props) {
                         const {setLogOut} = module;
                         dispatch(setLogOut());
                         notification['success']({
-                            message: 'Đăng xuất thành công'
+                            message: trans('layoutAvatar.message')
                         })
                     });
 
@@ -111,9 +115,9 @@ function Avatar(props) {
             }>
                 <SubListMenu>
                     <MenuItem>
-                        <Link to={'/profile'}>Thông tin cá nhân</Link>
+                        <Link to={'/profile'}>{trans('layoutAvatar.userInformation')}</Link>
                     </MenuItem>
-                    <MenuItem onClick={confirmLogout}>Đăng xuất</MenuItem>
+                    <MenuItem onClick={confirmLogout}>{trans('layoutAvatar.signOut')}</MenuItem>
                 </SubListMenu>
             </ListMenu>
         </Wrapper>

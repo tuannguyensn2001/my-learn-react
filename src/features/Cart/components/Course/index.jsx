@@ -5,6 +5,7 @@ import {useDispatch} from "react-redux";
 import {fetchAPIDeleteCourseFromCart} from "../../slice/cartSlice";
 import {Checkbox,Image,Button} from "antd";
 import styled from 'styled-components';
+import useLocalization from '../../../../hooks/useLocalization';
 
 
 const bodyCourseClass = styles.body__course;
@@ -20,6 +21,8 @@ const ButtonWrapper = styled(Button)`
 `
 
 function Course({course}) {
+
+    const {trans} = useLocalization();
 
     const dispatch = useDispatch();
 
@@ -47,7 +50,7 @@ function Course({course}) {
             <div className={coursePriceClass}>{course.price}</div>
             <div className={courseAction}>
                 <ButtonWrapper  onClick={() => deleteCourse(course.id)} >
-                   Xóa
+                   {trans('cartCourse.delete')}
                 </ButtonWrapper>
             </div>
         </div>

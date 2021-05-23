@@ -13,13 +13,12 @@ function Profile()
     const {url, path} = useRouteMatch();
     return(
         <Layout>
-            <div className="row container-fluid">
-                <div className="container col-xl-10 d-flex mt-5">
+            <div className="container-fluid">
+                <div className="container col-xl-12 d-flex mt-5">
                     <div className="col-xl-2">
                         <LeftNavBar/>
                     </div>
-                    <div className="col-xl-1"/>
-                    <div className="col-xl-9">
+                    <div className="col-xl-10">
 
                         <Switch>
                             <Route path={`${path}/my-courses`} component={MyCourse} />

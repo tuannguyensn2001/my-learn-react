@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './style.module.css';
 import Button from '../Button';
 import styled from 'styled-components';
+import useLocalization from '../../../../hooks/useLocalization';
+
 const otherCoursesClass = styles.other_courses + ' col-xl-10 col-lg-6 col-md-6 col-sm-12';
 const oCourseClass = styles.o_course + ' col-xl-3';
 const oCourseCoverClass = styles['o-course__cover'];
@@ -50,15 +52,23 @@ const OtherCourse = styled.div`
         top: 0;
         z-index: 1;
     }
+    @media (max-width: 1023px) {
+        &:hover ${PopUp}{
+            display: none;
+        }
+    }
 `
 
 
 
 function OtherCourses ({OtherCourses}) {
+
+    const {trans} = useLocalization();
+
     return (
         <div className="row ">
             <div className={otherCoursesClass}>
-                <OtherCourse className={'col-xl-3'}>
+                <OtherCourse className={'col-xl-3 col-lg-6 col-md-9'}>
                     <div className={oCourseCoverClass}>
                         <a href="#" className={oCoursePicCoverClass}>
                             <img className={oCoursePicClass}
@@ -84,7 +94,7 @@ function OtherCourses ({OtherCourses}) {
                                 <li className="des__detail">Lorem ipsum dolor sit.</li>
                             </ul>
                             <div className={popupBottomClass}>
-                                <Button>Thêm khóa học</Button>
+                                <Button>{trans('cartOtherCourse.addToCart')}</Button>
                                 <i class={popupHeartClass}></i>
                             </div>
                         </div>

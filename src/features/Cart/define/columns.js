@@ -1,10 +1,14 @@
 import {Button, Image} from "antd";
+import useLocalization from '../../../hooks/useLocalization';
 
 
-export const columnCart = (props) => {
-    return [
+export const ColumnCart = (props) => {
+
+    const {trans} = useLocalization();
+
+    return [    
         {
-            title: 'Ảnh khóa học',
+            title: trans('cartTable.thumbnail'),
             key: 'thumbnail',
             dataIndex: 'source',
             render(text) {
@@ -14,20 +18,20 @@ export const columnCart = (props) => {
             width: '10%'
         },
         {
-            title: 'Tên khóa học',
+            title: trans('cartTable.name'),
             key: 'name',
             dataIndex: 'name'
         },
         {
-            title: 'Giá tiền',
+            title: trans('cartTable.price'),
             key: 'price',
             dataIndex: 'price'
         },
         {
-            title: 'Thao tác',
+            title: trans('cartTable.action'),
             key: 'action',
             render(text, record) {
-                return <Button onClick={() => props.deleteCourse(record.id)} >Xóa</Button>
+                return <Button onClick={() => props.deleteCourse(record.id)} >{trans('cartTable.delete')}</Button>
             }
         }
 

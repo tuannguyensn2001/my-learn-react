@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Checkbox} from "antd";
+import useLocalization from '../hooks/useLocalization';
 
 const Option = styled.div`
   margin-top: 30px;
@@ -19,6 +20,8 @@ const OptionCheckbox = styled.div`
 
 
 function OptionFilter(props) {
+
+    const {trans} = useLocalization();
     const change = (event) => {
         console.log(event);
     }
@@ -39,7 +42,7 @@ function OptionFilter(props) {
 
     return (
         <Option>
-            <h6>Chủ đề</h6>
+            <h6>{trans('optionFilter.topic')}</h6>
             <OptionCheckbox>
                 {checkbox}
 

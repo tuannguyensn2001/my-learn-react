@@ -10,6 +10,12 @@ import BuyCourse from "./components/BuyCourse";
 import Description from "./components/Description";
 import Instructor from "./components/Instructor";
 import WithLoading from "../../components/Loading";
+import styled from 'styled-components';
+
+const RoadMapCover = styled.div`
+    padding: 0;
+    font-size: 1rem;
+`
 
 function CourseDetail() {
     const [currentCourse, setCurrentCourse] = useState({});
@@ -64,33 +70,31 @@ function CourseDetail() {
 
 
                 {/* Body */}
+                    <Body/>
+                {/* End body */}
 
-                <Body/>
 
+                {/* Buy course bar */}
+
+                <BuyCourse course={currentCourse}/>
+                {/* End buy course bar */}
+
+
+                <RoadMapCover className="container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
+                    <div>
+                        {renderRoadMap}
+                    </div>
+                </RoadMapCover>
+
+                {/* Description */}
+                <Description content={currentCourse.description}/>
+                {/* End description */}
+
+
+                {/* Instructor's information */}
+                <Instructor/>
+                {/* End Instructor's information */}
             </div>
-            {/* End body */}
-
-
-            {/* Buy course bar */}
-
-            <BuyCourse course={currentCourse}/>
-            {/* End buy course bar */}
-
-
-            <div className="container col-xl-6 offset-xl-1 col-lg-9 col-md-10 col-sm-10">
-                <div>
-                    {renderRoadMap}
-                </div>
-            </div>
-
-            {/* Description */}
-            <Description content={currentCourse.description}/>
-            {/* End description */}
-
-
-            {/* Instructor's information */}
-            <Instructor/>
-            {/* End Instructor's information */}
 
         </Layout>
     )

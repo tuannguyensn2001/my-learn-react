@@ -1,6 +1,6 @@
 /* Ipad pro, ipad */
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
 
     /* Header */
     .videoWrapper {
@@ -48,10 +48,6 @@
 /* Phone */
 @media (max-width: 765px) {
 
-    * {
-        font-size: 12px;
-    }
-
     /* Header */
     .head__title {
         font-size: 1.8rem !important;
@@ -64,6 +60,7 @@
     .head__created-by {
         text-align: center;
         margin-top: 1.2rem;
+        font-size: 1.3rem !important;
     }
     /* End header */
 

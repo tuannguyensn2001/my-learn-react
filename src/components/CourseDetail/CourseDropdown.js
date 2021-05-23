@@ -3,6 +3,7 @@ import CourseDropdownItem from "./CourseDropdownItem";
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 import Course from "../Common/Course";
+import useLocalization from '../../hooks/useLocalization';
 
 const CourseDropdownWrapper = styled.div`
   width: 100%;
@@ -51,6 +52,8 @@ CourseDropdown.propTypes = {
 
 
 function CourseDropdown({chapter,number}) {
+
+    const {trans} = useLocalization();
     const [isOpened,setIsOpened] = useState(false);
 
 
@@ -68,7 +71,7 @@ function CourseDropdown({chapter,number}) {
             <CourseDropdownContent onClick={() => setIsOpened(prev => !prev)}>
                 <CourseDropdownTitle>
                     <CourseDropdownIcon className={renderIcon}/>
-                    <div>Phần {number}: {chapter.name}</div>
+                    <div>{trans('courseDropDown.chapter')} {number}: {chapter.name}</div>
                 </CourseDropdownTitle>
                 <CourseDropdownLesson>
                     bla bla bla

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import {Link,useRouteMatch} from 'react-router-dom';
 import styled from 'styled-components';
+import useLocalization from "../../../../hooks/useLocalization";
 
 const coverAllClass = styles.cover_all;
 const coverClass = styles.cover;
@@ -28,6 +29,7 @@ const NavLink = styled(Link)`
 function LeftNavBar ({LeftNavBar}) {
 
     const {url, path} = useRouteMatch();
+    const {trans} = useLocalization();
 
     return (
         <div className={coverAllClass}>
@@ -39,10 +41,10 @@ function LeftNavBar ({LeftNavBar}) {
             </div>
 
             <ul className={navListClass} >
-                <NavLink to={`${path}/my-courses`} >Khóa học của tôi</NavLink>
-                <NavLink to={`${path}/`}>Hồ sơ</NavLink>
-                <NavLink to={`${path}/avatar`} >Ảnh đại diện</NavLink>
-                <NavLink to={`${path}/account`} >Tài khoản</NavLink>
+                <NavLink to={`${path}/my-courses`} >{trans('profileLeft.myCourse')}</NavLink>
+                <NavLink to={`${path}/`}>{trans('profileLeft.profile')}</NavLink>
+                <NavLink to={`${path}/avatar`} >{trans('profileLeft.avatar')}</NavLink>
+                <NavLink to={`${path}/account`} >{trans('profileLeft.account')}</NavLink>
             </ul>
         </div>
     )
