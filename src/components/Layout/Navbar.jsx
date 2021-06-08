@@ -88,18 +88,18 @@ function Navbar() {
 
 
     useEffect(() => {
-        console.log('authUser', authUser)
+
     }, [authUser]);
 
     useEffect(() => {
-        console.log('courseList', courseList)
+
     }, [courseList]);
 
     useEffect(() => {
-        window.addEventListener('scroll',event => {
-            const test = event.target;
-            console.log(event);
-        })
+        // window.addEventListener('scroll',event => {
+        //     const test = event.target;
+        //     console.log(event);
+        // })
     },[])
 
 

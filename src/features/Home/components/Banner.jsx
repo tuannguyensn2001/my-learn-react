@@ -62,7 +62,7 @@ const BannerButton = styled.button`
 
 function Banner() {
     const [height, setHeight] = useState(window.innerHeight);
-    const {trans,i18n} = useLocalization();
+    const {trans} = useLocalization();
 
     useEffect(() => {
         window.addEventListener('resize', event => setHeight(event.target.innerHeight))
@@ -78,7 +78,7 @@ function Banner() {
                             <BannerWelcome>{trans('banner.welcome')}</BannerWelcome>
                             <BannerTitle>{trans('banner.web_name')}</BannerTitle>
                             <BannerButtonCover>
-                                <BannerButton onClick={() => i18n.changeLanguage('en')}>{trans('banner.change_language')}</BannerButton>
+                                <BannerButton>{trans('banner.change_language')}</BannerButton>
                                 <BannerButton>{trans('banner.about')}</BannerButton>
                             </BannerButtonCover>
                         </BannerContent>

@@ -6,7 +6,7 @@ import "antd/dist/antd.css";
 import LessonPage from "./features/Lesson";
 import LoginPage from "./pages/Auth/Login";
 import {refresh, me} from "./services/authService";
-import {useDispatch,useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setLoggedIn} from "./slice/authSlice";
 import Loading from "react-fullscreen-loading";
 import styled from 'styled-components';
@@ -18,6 +18,8 @@ import ScrollToTop from "./hooks/scrollToTop";
 import Profile from "./features/Profile";
 import {setIsLoading} from "./slice/appSlice";
 import Classroom from "./features/Classroom";
+import useLocalization from "./hooks/useLocalization";
+import CreateClassroom from "./features/Classroom/pages/CreateClassroom";
 
 const LoadingWrapper = styled.div`
   z-index: 1000;
@@ -31,6 +33,7 @@ function App() {
 
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.app.isLoading);
+    const {trans, i18n} = useLocalization();
 
 
     useEffect(() => {
@@ -57,24 +60,26 @@ function App() {
     return (
         <div>
 
+
             <Router history={history}>
                 <LoadingWrapper>
-                    <Loading loading={isLoading}  background="#181823" loaderColor="#3498db"/>;
+                    <Loading loading={isLoading} background="#181823" loaderColor="#3498db"/>;
                 </LoadingWrapper>
 
                 <Switch>
 
                     <Route exact path='/' component={Home}/>
                     <Route path='/courses' component={CoursePage}/>
-                    <Route path='/course/:course' exact >
+                    <Route path='/course/:course' exact>
                         <ScrollToTop/>
                         <CourseDetail/>
                     </Route>
                     <Route path='/course/:course/learn/:lesson' component={LessonPage}/>
                     <Route path='/auth/login' component={LoginPage}/>
                     <Route path='/cart' component={Cart}/>
-                    <Route path='/profile' component={Profile} />
-                    <Route path={'/classroom'}  exact component={Classroom} />
+                    <Route path='/profile' component={Profile}/>
+                    <Route path={'/classroom'} exact component={Classroom}/>
+                    <Route  path={'/classroom/create'} component={CreateClassroom}/>
 
                 </Switch>
             </Router>

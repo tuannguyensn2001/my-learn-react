@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 import {Avatar as AvatarAntd, Modal, notification} from "antd";
 import {useHistory} from 'react-router-dom';
 import {useDispatch} from "react-redux";
 import useLocalization from '../../hooks/useLocalization';
-
 
 
 const ListMenu = styled.div`
@@ -19,10 +18,10 @@ const ListMenu = styled.div`
 `
 
 const SubListMenu = styled.ul`
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    font-size: .9rem;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  font-size: .9rem;
 `
 
 const Wrapper = styled.div`
@@ -45,6 +44,7 @@ const AvatarWrapper = styled.div`
 const MenuItem = styled.li`
   padding: 1rem 0;
   width: 100%;
+
   &:hover {
     cursor: pointer;
     background: #ccc;
@@ -60,11 +60,27 @@ function Avatar(props) {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const avatar = useRef(null);
+
     const dispatch = useDispatch();
 
 
     useEffect(() => {
-        console.log('render 2');
+        const handleWindowClick = (event) => {
+
+            if (avatar.current.contains(event.target)) return;
+
+            if (!event.target.contains(avatar.current)) {
+                setIsOpen(false);
+            }
+
+
+        }
+        window.addEventListener('mousedown', handleWindowClick);
+
+        return () => {
+            window.removeEventListener('mousedown', handleWindowClick);
+        }
     }, [])
 
 
@@ -101,15 +117,15 @@ function Avatar(props) {
                 paddingTop: '3px'
             }
             }><i className="fas fa-shopping-cart fa-2x"/></Link>
-            <AvatarWrapper onClick={() => setIsOpen((prevState) => !prevState)}>
+            <AvatarWrapper onClick={() => setIsOpen((prevState) => true)}>
 
                 <AvatarAntd
-                src={'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2018_04_28/image001_2.jpg'}
+                    src={'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2018_04_28/image001_2.jpg'}
                 />
             </AvatarWrapper>
 
 
-            <ListMenu style={{
+            <ListMenu ref={avatar} style={{
                 display: isOpen ? 'block' : 'none'
             }
             }>

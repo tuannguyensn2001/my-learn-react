@@ -12,12 +12,10 @@ const auth = createSlice({
     },
     reducers: {
         setLoggedIn: (state, action) => {
-            console.log('logged in');
             const {user, token} = action.payload;
             state.isLoggedIn = true;
             state.user = user;
             state.token = token;
-
             localStorage.setItem('user_token', token);
         },
         updateCourse: (state, action) => {
