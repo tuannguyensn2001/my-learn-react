@@ -28,7 +28,6 @@ function Classroom() {
         <Layout>
             <Container className="container">
                 <Row gutter={16}>
-                    <h1>{classrooms?.length}</h1>
                     <Col md={18} className={'gutter-row'}>
                         <div>
                             <Input suffix={<SearchOutlined/>} placeholder={"tuan Nhokvip"}/>
@@ -50,6 +49,12 @@ function Classroom() {
                         <div><Link to={'/classroom/create'}>Tạo lớp học</Link></div>
                     </Col>
 
+                </Row>
+
+                <Row>
+                    {classrooms?.map(classroom => (
+                        <div>{classroom.name}</div>
+                    ))}
                 </Row>
             </Container>
         </Layout>

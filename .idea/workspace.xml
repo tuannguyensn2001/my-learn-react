@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Avatar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Cart/slice/cartSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Classroom/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Classroom/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Home/components/Banner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localization/vi/classroom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/vi/classroom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slice/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slice/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +115,7 @@
       <workItem from="1622048546681" duration="6000" />
       <workItem from="1622123257001" duration="9000" />
       <workItem from="1623080664778" duration="3825000" />
-      <workItem from="1623155850789" duration="7340000" />
+      <workItem from="1623155850789" duration="7917000" />
     </task>
     <servers />
   </component>

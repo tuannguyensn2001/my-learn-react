@@ -22,6 +22,7 @@
     "react-i18next": "^11.8.15",
     "react-player": "^2.9.0",
     "react-plyr": "^2.2.0",
+    "react-query": "^3.16.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
