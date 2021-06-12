@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="45dca375-adf3-4669-afef-be83c573a991" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Classroom/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Classroom/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/vi/classroom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/vi/classroom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -115,7 +114,12 @@
       <workItem from="1622048546681" duration="6000" />
       <workItem from="1622123257001" duration="9000" />
       <workItem from="1623080664778" duration="3825000" />
-      <workItem from="1623155850789" duration="7917000" />
+      <workItem from="1623155850789" duration="8003000" />
+      <workItem from="1623251615071" duration="1604000" />
+      <workItem from="1623324859192" duration="96000" />
+      <workItem from="1623341986634" duration="5459000" />
+      <workItem from="1623428660213" duration="12000" />
+      <workItem from="1623462841073" duration="205000" />
     </task>
     <servers />
   </component>

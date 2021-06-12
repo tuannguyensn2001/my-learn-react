@@ -20,6 +20,7 @@ import {setIsLoading} from "./slice/appSlice";
 import Classroom from "./features/Classroom";
 import useLocalization from "./hooks/useLocalization";
 import CreateClassroom from "./features/Classroom/pages/CreateClassroom";
+import ClassroomDetail from "./features/Classroom/pages/ClassroomDetail";
 
 const LoadingWrapper = styled.div`
   z-index: 1000;
@@ -79,7 +80,8 @@ function App() {
                     <Route path='/cart' component={Cart}/>
                     <Route path='/profile' component={Profile}/>
                     <Route path={'/classroom'} exact component={Classroom}/>
-                    <Route  path={'/classroom/create'} component={CreateClassroom}/>
+                    <Route path={'/classroom/create'} component={CreateClassroom}/>
+                    <Route path={'/classroom/:code'} component={ClassroomDetail}/>
 
                 </Switch>
             </Router>
